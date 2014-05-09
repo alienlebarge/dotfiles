@@ -1,3 +1,6 @@
 [user]
 	name = Cédric Aellen
 	email = cedric.aellen@alienlebarge.ch
+[http]
+	proxy = http://localhost:3128
+	proxys = http://localhost:3128
