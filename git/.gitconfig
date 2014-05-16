@@ -7,3 +7,5 @@
 	proxy = http://localhost:3128
 [push]
 	default = current
+[color]
+	ui = true
