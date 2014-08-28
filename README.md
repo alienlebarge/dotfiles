@@ -31,6 +31,11 @@ So, to recap, the install script will:
     cd ~/dotfiles
     ./makesymlinks.sh
 
+
+## Home vs. Work
+
+There's a [`work`](https://github.com/alienlebarge/dotfiles/tree/work) that mainly add settings for Squid proxy.
+
 ## Credits
 
 It is based on [Michael Smalley's article](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
