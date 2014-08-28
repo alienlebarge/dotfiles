@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig npmrc"    # list of files/folders to symlink in homedir
+files="bowerrc gitconfig npmrc"    # list of files/folders to symlink in homedir
 
 ##########
 
