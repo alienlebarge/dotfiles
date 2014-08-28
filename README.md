@@ -1,4 +1,4 @@
-dotefiles
+dotfiles
 =========
 
 This repository includes all of my custom dotfiles.  They should be cloned to
@@ -27,7 +27,7 @@ So, to recap, the install script will:
 
 ## Installation
 
-    git clone http://github.com/alienlebarge/dotefiles ~/dotfiles
+    git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
     cd ~/dotfiles
     ./makesymlinks.sh
 
