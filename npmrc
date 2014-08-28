@@ -2,7 +2,3 @@
 ; npm userconfig file
 ; read `npm help config` for help on the various options
 ;;;;
-
-; I work in proxy land
-proxy = http://localhost:3128/
-https-proxy = http://localhost:3128/
