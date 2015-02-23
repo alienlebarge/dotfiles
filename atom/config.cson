@@ -12,3 +12,4 @@
     invisibles: {}
     fontFamily: "Source Code Pro"
     showIndentGuide: true
+    showInvisibles: true
