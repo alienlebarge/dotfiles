@@ -3,5 +3,6 @@ atom/.node-gyp
 atom/.storage
 atom/compile-cache/
 atom/packages
+!atom/packages/**/package.json
 atom/storage
 atom/themes
