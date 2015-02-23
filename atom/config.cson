@@ -1,60 +1,12 @@
 "*":
   "exception-reporting":
-    userId: "98bbd1ea-27cf-e2d4-b035-95ba978c13a8"
-  "release-notes":
-    viewedVersion: "0.86.0"
+    userId: "42e7083d-4a9e-4628-29b7-09efaa2c29a3"
   welcome:
     showOnStartup: false
-  metrics:
-    userId: "31cc14c8e74c20e2af668f1f7ca7c8255d91d7f8"
-  editor:
-    fontFamily: "Source Code Pro"
-    showInvisibles: true
-    showIndentGuide: true
-    softWrap: true
-    softWrapAtPreferredLineLength: true
-    invisibles: {}
   core:
     themes: [
-      "seti-ui"
-      "seti-monokai"
+      "one-dark-ui"
+      "one-dark-syntax"
     ]
-  feedback:
-    email: "cedric.aellen@alienlebarge.ch"
-  "open-terminal-here":
-    app: "iTerm.app"
-  "tree-view":
-    hideIgnoredNames: true
-  alignment:
-    rightSeparators: [
-      "="
-      "+="
-      "-="
-      "*="
-      "/="
-      "?="
-      "|="
-      "%="
-      ".="
-    ]
-    spaceSeparators: [
-      "="
-      "+="
-      "-="
-      "*="
-      "/="
-      "?="
-      "|="
-      "%="
-      ".="
-    ]
-  minimap:
-    plugins:
-      "color-highlight": true
-      "git-diff": true
-  linter: {}
-  "linter-scss-lint":
-    scssLintExecutablePath: "/Users/cedricaellen/.rvm/gems/ruby-2.0.0-p195/bin/scss-lint"
-    scssLintExcludedLinters: []
-  "atom-beautify":
-    _analyticsUserId: "8db39b16-2dec-443b-8f8e-6eb3dc2052a9"
+  editor:
+    invisibles: {}
