@@ -1,0 +1,6 @@
+atom/.node-gyp
+atom/.storage
+atom/compile-cache/
+atom/packages
+atom/storage
+atom/themes
