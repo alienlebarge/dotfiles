@@ -11,3 +11,4 @@
   editor:
     invisibles: {}
     fontFamily: "Source Code Pro"
+    showIndentGuide: true
