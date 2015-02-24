@@ -38,6 +38,11 @@ I work behind a proxy. So if you do not need any proxy settings, you have to wal
 
 I use [SquidMan](http://squidman.net) for my proxy connections.
 
+## Atom
+
+To install atom's package, simply run `$ apm stars --install`.  
+It will install [my stars](https://atom.io/users/alienlebarge/stars).
+
 ## Credits
 
 It is based on [Michael Smalley's article](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
