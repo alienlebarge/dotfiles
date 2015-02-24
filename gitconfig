@@ -1,26 +1,15 @@
-[push]
-	default = current
 [user]
 	name = Cédric Aellen
 	email = cedric.aellen@alienlebarge.ch
+[http]
+	proxy = http://localhost:3128
+[https]
+	proxy = http://localhost:3128
+[push]
+	default = current
 [color]
 	ui = true
-[credential]
-	helper = osxkeychain
-[mergetool]
-	keepBackup = true
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[merge]
-	tool = Kaleidoscope
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
