@@ -1,4 +1,5 @@
 atom/.apm
+atom/.apm/.apmrc
 atom/.node-gyp
 atom/.storage
 atom/compile-cache/
