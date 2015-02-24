@@ -43,6 +43,16 @@ I use [SquidMan](http://squidman.net) for my proxy connections.
 To install atom's package, simply run `$ apm stars --install`.  
 It will install [my stars](https://atom.io/users/alienlebarge/stars).
 
+## Install Homebrew formulae
+
+To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
+
+```
+$ .brew.shs
+```
+
+If you get an error when running it, try to `$ sudo chmod 755 brew.sh` it.
+
 ## Credits
 
 It is based on [Michael Smalley's article](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
