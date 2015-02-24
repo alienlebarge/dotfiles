@@ -34,7 +34,9 @@ So, to recap, the install script will:
 
 ## Home vs. Work
 
-There's a [`work`](https://github.com/alienlebarge/dotfiles/tree/work) that mainly add settings for Squid proxy.
+I work behind a proxy. So if you do not need any proxy settings, you have to walk through all files and remove all proxy configurations.
+
+I use [SquidMan](http://squidman.net) for my proxy connections.
 
 ## Credits
 
