@@ -5,8 +5,8 @@
 ; read `npm help config` for help on the various options
 ;;;;
 
-proxy=http://localhost:3128/
-https-proxy=http://localhost:3128/
+;proxy=http://localhost:3128/
+;https-proxy=http://localhost:3128/
 
 ;;;;
 ; all options with default values
