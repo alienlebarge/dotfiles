@@ -1,5 +1,5 @@
 [user]
-	name = Cédric Aellen
+	name = Cédric Aellen
 	email = cedric.aellen@alienlebarge.ch
 [push]
 	default = current
@@ -9,3 +9,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 	required = true
+[http]
+	proxy = http://localhost:3128
+[https]
+	proxy = http://localhost:3128
