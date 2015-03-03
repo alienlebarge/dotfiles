@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="atom aliases bash_profile bash_prompt bowerrc curlrc gemrc gitconfig npmrc"    # list of files/folders to symlink in homedir
+files="atom aliases bash_profile bash_prompt bashrc bowerrc curlrc extra gemrc gitconfig npmrc"    # list of files/folders to symlink in homedir
 
 ##########
 
