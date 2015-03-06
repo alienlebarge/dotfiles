@@ -82,4 +82,4 @@
 	smudge = git media smudge %f
 	required = true
 [core]
-	editor = nano
+	editor = vim
