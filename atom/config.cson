@@ -13,3 +13,13 @@
     fontFamily: "Source Code Pro"
     showIndentGuide: true
     showInvisibles: true
+  minimap:
+    plugins:
+      "git-diff": true
+      "find-and-replace": true
+  "git-log":
+    fontFamily: "Source Code Pro"
+    fontScale: 1
+  "atom-ternjs": {}
+  "atom-beautify":
+    _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
