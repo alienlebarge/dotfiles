@@ -15,3 +15,7 @@ unset file;
 # Import Ruby RVM profile
 # They ask to do that during RVM install
 source ~/.profile
+
+# Ruby rbenv configuration
+# see https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x
+eval "$(rbenv init -)"
