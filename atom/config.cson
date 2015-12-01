@@ -23,3 +23,5 @@
   "atom-ternjs": {}
   "atom-beautify":
     _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
+  "keyboard-localization":
+    useKeyboardLayout: "fr_CH"
