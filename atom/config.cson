@@ -1,27 +1,27 @@
 "*":
-  "exception-reporting":
-    userId: "42e7083d-4a9e-4628-29b7-09efaa2c29a3"
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
+  "atom-ternjs": {}
   core:
     themes: [
       "one-dark-ui"
       "one-dark-syntax"
     ]
   editor:
+    fontFamily: "Hack, Source Code Pro, monospace"
     invisibles: {}
-    fontFamily: "Source Code Pro"
     showIndentGuide: true
     showInvisibles: true
-  minimap:
-    plugins:
-      "git-diff": true
-      "find-and-replace": true
+  "exception-reporting":
+    userId: "42e7083d-4a9e-4628-29b7-09efaa2c29a3"
   "git-log":
     fontFamily: "Source Code Pro"
     fontScale: 1
-  "atom-ternjs": {}
-  "atom-beautify":
-    _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
   "keyboard-localization":
     useKeyboardLayout: "fr_CH"
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "git-diff": true
+  welcome:
+    showOnStartup: false
