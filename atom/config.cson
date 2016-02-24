@@ -3,12 +3,13 @@
     _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
   "atom-ternjs": {}
   core:
+    audioBeep: false
     themes: [
       "one-dark-ui"
-      "one-dark-syntax"
+      "oceanic-next"
     ]
   editor:
-    fontFamily: "Hack, Source Code Pro, monospace"
+    fontFamily: "Operator Mono, Hack, Source Code Pro, monospace"
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -23,5 +24,6 @@
     plugins:
       "find-and-replace": true
       "git-diff": true
+  "one-dark-ui": {}
   welcome:
     showOnStartup: false
