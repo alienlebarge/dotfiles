@@ -13,6 +13,7 @@
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
+    useShadowDOM: false
   "exception-reporting":
     userId: "42e7083d-4a9e-4628-29b7-09efaa2c29a3"
   "git-log":
