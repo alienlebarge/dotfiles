@@ -15,6 +15,8 @@ brew upgrade
 # installation method.
 brew install node
 
+# Install Git
+brew install git
+
 # Remove outdated versions from the cellar.
 brew cleanup
-
