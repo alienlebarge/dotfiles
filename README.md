@@ -48,7 +48,7 @@ It will install [my stars](https://atom.io/users/alienlebarge/stars).
 To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
 
 ```
-$ .brew.shs
+$ ./brew.sh
 ```
 
 If you get an error when running it, try to `$ sudo chmod 755 brew.sh` it.
