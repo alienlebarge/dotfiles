@@ -83,3 +83,5 @@
 	required = true
 [core]
 	editor = vim
+[credential]
+	helper = osxkeychain

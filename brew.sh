@@ -18,5 +18,8 @@ brew install node
 # Install Git
 brew install git
 
+# Install Ruby
+brew install ruby
+
 # Remove outdated versions from the cellar.
 brew cleanup
