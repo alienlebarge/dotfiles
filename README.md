@@ -53,6 +53,15 @@ $ ./brew.sh
 
 If you get an error when running it, try to `$ sudo chmod 755 brew.sh` it.
 
+
+### Git
+
+It's installed via Homebrew to get the laetest version (see [Install Homebrew formulae](#install-homebrew-formulae)).
+
+#### GitHub Config
+
+Use this [config](https://help.github.com/articles/caching-your-github-password-in-git/) to cache the password.
+
 ## Credits
 
 It is based on [Michael Smalley's article](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).

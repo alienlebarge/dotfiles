@@ -46,3 +46,4 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 
 # run some apps
 alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
+alias atomp='http_proxy=http://localhost:3128 https_proxy=http://localhost:3128 /Applications/Atom.app/Contents/MacOS/Atom' # Atom behind proxy
