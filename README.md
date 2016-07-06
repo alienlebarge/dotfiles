@@ -45,9 +45,8 @@ It will install [my stars](https://atom.io/users/alienlebarge/stars).
 
 ### Update packages
 
-```shell
-$ (sudo) apm update
-```
+1. `$ (sudo) apm update`
+2. Restart Atom
 
 ## Install Homebrew formulae
 
