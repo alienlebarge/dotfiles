@@ -21,5 +21,8 @@ brew install git
 # Install Ruby
 brew install ruby
 
+# Install yarn package manager
+brew install yarn
+
 # Remove outdated versions from the cellar.
 brew cleanup
