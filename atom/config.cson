@@ -1,9 +1,16 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
+    general:
+      _analyticsUserId: "a0fb5d50-2150-4a07-a43c-5161db14a586"
   "atom-ternjs": {}
   core:
     audioBeep: false
+    telemetryConsent: "limited"
+    customFileTypes:
+      "text.html": [
+        "html.swig"
+      ]
     themes: [
       "one-dark-ui"
       "oceanic-next"
@@ -24,7 +31,9 @@
   minimap:
     plugins:
       "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
+      "git-diffDecorationsZIndex": 0
   "one-dark-ui": {}
   welcome:
     showOnStartup: false
