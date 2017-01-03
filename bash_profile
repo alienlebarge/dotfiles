@@ -19,3 +19,9 @@ source ~/.profile
 # Ruby rbenv configuration
 # see https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x
 eval "$(rbenv init -)"
+
+# Make Sublimelinter works
+# see http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#adding-to-the-paths-setting
+case $- in
+   *i*) source ~/.bashrc
+esac
