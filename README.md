@@ -48,6 +48,8 @@ It will install [my stars](https://atom.io/users/alienlebarge/stars).
 1. `$ (sudo) apm update`
 2. Restart Atom
 
+If you get some `Eaccess` errors, try `$ sudo chown -R `whoami` /Users/myuser/dotfiles/atom/`
+
 ## Install Homebrew formulae
 
 To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
