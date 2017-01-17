@@ -1,16 +1,15 @@
 "*":
   "atom-beautify":
-    _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
     general:
-      _analyticsUserId: "a0fb5d50-2150-4a07-a43c-5161db14a586"
+      _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
   "atom-ternjs": {}
   core:
     audioBeep: false
-    telemetryConsent: "limited"
     customFileTypes:
       "text.html": [
         "html.swig"
       ]
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "oceanic-next"
@@ -26,6 +25,9 @@
   "git-log":
     fontFamily: "Source Code Pro"
     fontScale: 1
+  "git-plus":
+    general:
+      _analyticsUserId: "70faea4a-5454-4dcb-97a8-6d2e5779b7d2"
   "keyboard-localization":
     useKeyboardLayout: "fr_CH"
   minimap:
@@ -35,5 +37,7 @@
       "git-diff": true
       "git-diffDecorationsZIndex": 0
   "one-dark-ui": {}
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
   welcome:
     showOnStartup: false
