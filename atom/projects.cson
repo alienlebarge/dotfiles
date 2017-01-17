@@ -1,0 +1,26 @@
+[
+  {
+    title: "Web Vd"
+    paths: [
+      "/Users/cedricaellen/Projects/web-vd"
+    ]
+  }
+  {
+    title: "Foehn"
+    paths: [
+      "/Users/cedricaellen/Projects/foehn"
+    ]
+  }
+  {
+    title: "~"
+    paths: [
+      "/Users/cedricaellen"
+    ]
+  }
+  {
+    title: "Alb Frontend"
+    paths: [
+      "/Users/cedricaellen/Projects/alb-frontend"
+    ]
+  }
+]
