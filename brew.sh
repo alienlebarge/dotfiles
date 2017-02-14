@@ -11,6 +11,10 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+# Install htop
+# http://hisham.hm/htop/
+brew install htop
+
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
 brew install node
