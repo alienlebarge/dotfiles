@@ -27,7 +27,7 @@
     fontScale: 1
   "git-plus":
     general:
-      _analyticsUserId: "70faea4a-5454-4dcb-97a8-6d2e5779b7d2"
+      _analyticsUserId: "49e5b9ab-6cff-4235-80c9-d90594cdc3ef"
   "keyboard-localization":
     useKeyboardLayout: "fr_CH"
   minimap:
@@ -36,8 +36,12 @@
       "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
       "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
   "one-dark-ui": {}
   wakatime:
     apikey: "Saved in your ~/.wakatime.cfg file"
+  "wakatime-hidden":
+    lastInit: 1487102579
   welcome:
     showOnStartup: false

@@ -1,26 +1,20 @@
 [
   {
-    title: "Web Vd"
-    paths: [
-      "/Users/cedricaellen/Projects/web-vd"
-    ]
-  }
-  {
     title: "Foehn"
     paths: [
       "/Users/cedricaellen/Projects/foehn"
     ]
   }
   {
-    title: "~"
+    title: "Alienlebarge Github Com"
     paths: [
-      "/Users/cedricaellen"
+      "/Users/cedricaellen/Projects/alienlebarge.github.com"
     ]
   }
   {
-    title: "Alb Frontend"
+    title: "~"
     paths: [
-      "/Users/cedricaellen/Projects/alb-frontend"
+      "/Users/cedricaellen"
     ]
   }
 ]
