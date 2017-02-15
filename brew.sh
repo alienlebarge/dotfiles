@@ -28,5 +28,9 @@ brew install ruby
 # Install yarn package manager
 brew install yarn
 
+# Install ponysay
+# Because we need pony
+brew install ponysay
+
 # Remove outdated versions from the cellar.
 brew cleanup
