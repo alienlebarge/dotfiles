@@ -43,7 +43,3 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# run some apps
-alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
-alias atomp='http_proxy=http://localhost:3128 https_proxy=http://localhost:3128 /Applications/Atom.app/Contents/MacOS/Atom' # Atom behind proxy
