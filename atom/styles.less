@@ -3,20 +3,18 @@ atom-text-editor {
   font-family: "Operator Mono", "Source Code Pro";
   font-size: 14px;
   line-height: 1.7;
+}
 
-  /**
-   * Italics
-   *
-   * 1. HTML attributes
-   * 2. CSS properties
-   * 3. Comments
-   */
-  .attribute-name, /* [1] */
-  .property-name, /* [2] */
-  .comment { /* [3] */
+.entity.other.attribute-name {
+  font-style: italic;
+}
+atom-text-editor::shadow{
+  .entity.other.attribute-name {
     font-style: italic;
   }
-
+  .comment {
+    font-style: italic;
+  }
 }
 
 atom-panel.tool-panel {
