@@ -1,4 +1,6 @@
 "*":
+  "activate-power-mode":
+    playAudio: {}
   "atom-beautify":
     general:
       _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
@@ -12,8 +14,11 @@
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "oceanic-next"
+      "atom-panda-syntax"
     ]
+  "duotone-dark-syntax":
+    color:
+      uno: "#84bfcc"
   editor:
     fontFamily: "Operator Mono, Hack, Source Code Pro, monospace"
     invisibles: {}
@@ -42,6 +47,6 @@
   wakatime:
     apikey: "Saved in your ~/.wakatime.cfg file"
   "wakatime-hidden":
-    lastInit: 1487102579
+    lastInit: 1492752692
   welcome:
     showOnStartup: false
