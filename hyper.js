@@ -83,8 +83,9 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     `hyperpower`,
-    `hyper-pane`,
-    `hyperline`
+    `hyperlinks`,
+    `hyper-statusline`,
+    `hyper-snazzy`
   ],
 
   // in development, you can create a directory under
