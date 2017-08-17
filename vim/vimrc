@@ -14,8 +14,11 @@ syntax on
 " Use Dracula theme
 color dracula
 " Comments and attributes in italic
-"highlight Comment cterm=italic
-"highlight htmlArg cterm=italic
+highlight Comment cterm=italic
+highlight Comment gui=italic
+highlight htmlArg cterm=italic
+highlight htmlArg gui=italic
+
 
 " Visual decoration
 
