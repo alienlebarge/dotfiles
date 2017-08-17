@@ -5,20 +5,27 @@ execute pathogen#infect()
 set encoding=utf-8
 set fileencoding=utf-8
 
-filetype plugin indent on
-
 " Syntax highlight
 
 " Enable syntax highlghting
 syntax on
 " Use Dracula theme
 color dracula
+" Show matching penrens, brackets, etc.
+set showmatch
 " Comments and attributes in italic
 highlight Comment cterm=italic
 highlight Comment gui=italic
 highlight htmlArg cterm=italic
 highlight htmlArg gui=italic
 
+" Text management
+filetype plugin indent on
+" 4 spaces please
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
 " Visual decoration
 
