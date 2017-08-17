@@ -32,5 +32,8 @@ brew install yarn
 # Because we need pony
 brew install ponysay
 
+# Install latest version of Vim
+brew install vim --with-override-system-vi
+
 # Remove outdated versions from the cellar.
 brew cleanup
