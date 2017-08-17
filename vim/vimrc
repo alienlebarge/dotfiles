@@ -1,0 +1,29 @@
+" Let's us Pathogen
+execute pathogen#infect()
+
+" Use UTF-8 by default
+set encoding=utf-8
+set fileencoding=utf-8
+
+filetype plugin indent on
+
+" Syntax highlight
+
+" Enable syntax highlghting
+syntax on
+" Use Dracula theme
+color dracula
+" Comments and attributes in italic
+"highlight Comment cterm=italic
+"highlight htmlArg cterm=italic
+
+" Visual decoration
+
+" Set relative line number
+set relativenumber
+" ...but absolute numbers on the current line (hybrid numbering)r
+set number
+
+" Set relevant filetypes
+autocmd BufRead, BufNewFile *.md set filetype=markdown
+autocmd BufRead, BufNewFile *.hbs set filetype=html
