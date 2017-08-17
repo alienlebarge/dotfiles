@@ -32,6 +32,10 @@ brew install yarn
 # Because we need pony
 brew install ponysay
 
+# Install exa
+# a replacement for `ls`
+brew install exa
+
 # Install latest version of Vim
 brew install vim --with-override-system-vi
 
