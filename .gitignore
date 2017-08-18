@@ -10,3 +10,4 @@ atom/storage
 atom/themes
 extra
 atom/blob-store
+/vim/.netrwhist
