@@ -1,40 +1,22 @@
 "*":
   "activate-power-mode":
-    playAudio: {}
+    plugins:
+      playAudio: true
+      screenShake: true
   "atom-beautify":
     general:
-      _analyticsUserId: "83429072-4046-4dd1-85f5-5a216dc56d2a"
-  "atom-ternjs": {}
+      _analyticsUserId: "e2a73e32-688d-4b41-a63b-0f9a634dfb9b"
   core:
-    audioBeep: false
-    customFileTypes:
-      "text.html": [
-        "html.swig"
-      ]
-    telemetryConsent: "limited"
-    themes: [
-      "one-dark-ui"
-      "atom-panda-syntax"
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "activate-power-mode"
     ]
-  "duotone-dark-syntax":
-    color:
-      uno: "#84bfcc"
-  editor:
-    fontFamily: "Operator Mono, Hack, Source Code Pro, monospace"
-    invisibles: {}
-    showIndentGuide: true
-    showInvisibles: true
-    useShadowDOM: false
+    projectHome: "/Users/cedricaellen/Projects"
+    telemetryConsent: "limited"
   "exception-reporting":
-    userId: "42e7083d-4a9e-4628-29b7-09efaa2c29a3"
-  "git-log":
-    fontFamily: "Source Code Pro"
-    fontScale: 1
-  "git-plus":
-    general:
-      _analyticsUserId: "49e5b9ab-6cff-4235-80c9-d90594cdc3ef"
-  "keyboard-localization":
-    useKeyboardLayout: "fr_CH"
+    userId: "52f27459-32fc-4ec5-ba0f-8af2d860a71f"
+  "linter-ui-default":
+    panelHeight: 64
   minimap:
     plugins:
       "find-and-replace": true
@@ -43,10 +25,5 @@
       "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
-  "one-dark-ui": {}
   wakatime:
     apikey: "Saved in your ~/.wakatime.cfg file"
-  "wakatime-hidden":
-    lastInit: 1492752692
-  welcome:
-    showOnStartup: false
