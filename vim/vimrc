@@ -9,8 +9,8 @@ set fileencoding=utf-8
 
 " Enable syntax highlghting
 syntax on
-" Use Dracula theme
-color dracula
+set background=dark
+colorscheme solarized
 " Show matching penrens, brackets, etc.
 set showmatch
 " Comments and attributes in italic
