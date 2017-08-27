@@ -10,4 +10,8 @@ atom/storage
 atom/themes
 extra
 atom/blob-store
+
+# Ignore Vim temporary files
 /vim/.netrwhist
+*.swp
+*.swo
