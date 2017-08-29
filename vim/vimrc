@@ -8,9 +8,11 @@ set fileencoding=utf-8
 " Syntax highlight
 
 " Enable syntax highlghting
-syntax on
+syntax enable
 set background=dark
 colorscheme solarized
+" Set airline theme
+let g:airline_theme='solarized'
 " Show matching penrens, brackets, etc.
 set showmatch
 " Comments and attributes in italic

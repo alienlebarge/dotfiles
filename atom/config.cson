@@ -3,18 +3,12 @@
     plugins:
       playAudio: true
       screenShake: true
-  "atom-beautify":
-    general:
-      _analyticsUserId: "e2a73e32-688d-4b41-a63b-0f9a634dfb9b"
   core:
-    closeDeletedFileTabs: true
     disabledPackages: [
       "activate-power-mode"
     ]
-    projectHome: "/Users/cedricaellen/Projects"
-    telemetryConsent: "limited"
   "exception-reporting":
-    userId: "52f27459-32fc-4ec5-ba0f-8af2d860a71f"
+    userId: "245b8d43-ff79-4771-9488-263a947107cc"
   "linter-ui-default":
     panelHeight: 64
   minimap:
@@ -25,5 +19,3 @@
       "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
-  wakatime:
-    apikey: "Saved in your ~/.wakatime.cfg file"
