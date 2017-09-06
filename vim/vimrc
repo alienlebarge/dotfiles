@@ -68,7 +68,7 @@ set sidescroll=1
 
 " Allow motions and back-spacing over line-endings etc.
 set backspace=indent,eol,start
-set wichwrap=h,l,b,<,>,~,[,]
+set whichwrap=h,l,b,<,>,~,[,]
 
 " Don’t redraw the screen unless we need to
 set lazyredraw
