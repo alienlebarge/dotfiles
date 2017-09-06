@@ -148,7 +148,11 @@ set smartcase
 
 autocmd BufRead, BufNewFile *.md set filetype=markdown
 autocmd BufRead, BufNewFile *.hbs set filetype=html
-autocmd BufRead, BufNewFile *.css set filetype=sass
+
+" Use Sass syntax for `.css` files because PostCSS !
+augroup filetypedetect
+    au BufRead,BufNewFile *.css set filetype=sass
+augroup END
 
 
 
