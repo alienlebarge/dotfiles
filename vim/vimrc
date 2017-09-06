@@ -1,3 +1,5 @@
+" Setup
+
 " Let's us Pathogen
 execute pathogen#infect()
 
@@ -5,23 +7,34 @@ execute pathogen#infect()
 set encoding=utf-8
 set fileencoding=utf-8
 
+
+
+
 " Syntax highlight
 
 " Enable syntax highlghting
 syntax enable
 set background=dark
 colorscheme solarized
+
 " Set airline theme
 let g:airline_theme='solarized'
-" Show matching penrens, brackets, etc.
+
+"Show matching penrens, brackets, etc.
 set showmatch
+
 " Comments and attributes in italic
 highlight Comment cterm=italic
 highlight Comment gui=italic
 highlight htmlArg cterm=italic
 highlight htmlArg gui=italic
 
+
+
+
+
 " Text management
+
 filetype plugin indent on
 " 4 spaces please
 set expandtab
@@ -29,42 +42,129 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
+" Round indent to the nearest multiple of 4
+set shiftround
+
+" No line-wrapping
+set nowrap
+
+" Spell-check always on
+set spell
+
+" Interpret numbers with leading zero as decimal, not octal
+set nrformats-=octal
+
+
+
+
 " Interactions
 
 " Start scrolling slightly before the cursor reaches an edge
 set scrolloff=3
 set sidescrolloff=5
 
+" Scroll sideways a character at a time, rather than a screen at a time
+set sidescroll=1
+
+" Allow motions and back-spacing over line-endings etc.
+set backspace=indent,eol,start
+set wichwrap=h,l,b,<,>,~,[,]
+
+" Don’t redraw the screen unless we need to
+set lazyredraw
+
+" Write swapfiles to disk a little sooner
+set updatetime=250
+
+
+
+
+
 " Visual decoration
 
 " Show status line
 set laststatus=2
+
 " Show commands you're typing
 set showcmd
+
 " Show current line and column position in file
 set ruler
+
 " Customise our current location information
 set statusline=%f\ %=Line\ %l/%L\ Col\ %c\ (%p%%)
+
 " Show file title in terminal tab
 set title
+
 " Show invisible
 set list
 set listchars=tab:»-,trail:·
+
 "Set relative line number
 set relativenumber
+
 " ...but absolute numbers on the current line (hybrid numbering)r
 set number
+
 " Force cursor onto a new line after 80 characters
 set textwidth=80
+
 " However, in Git commit messages, let’s make it 72 characters
 autocmd FileType gitcommit set textwidth=72
+
 " Colour the column just after our line limit so that we don’t type over it
 set colorcolumn=+1
+
 " In Git commit messages, also colour the 51st column (for titles)
 autocmd FileType gitcommit set colorcolumn+=51
+
 " Highlight current line
 set cursorline
 
+
+
+
+
+" Search
+
+" Don’t keep results highlighted after searching...
+set nohlsearch
+
+" ...just highlight as we type
+set incsearch
+
+" Ignore case when searching...
+set ignorecase
+
+" ...except if we input a capital letter
+set smartcase
+
+
+
+
+
 " Set relevant filetypes
+
 autocmd BufRead, BufNewFile *.md set filetype=markdown
 autocmd BufRead, BufNewFile *.hbs set filetype=html
+autocmd BufRead, BufNewFile *.css set filetype=sass
+
+
+
+
+" Key mappings
+
+" Disable arrow keys (hardcore)
+map  <Up>    <Nop>
+imap <Up>    <Nop>
+map  <Down>  <Nop>
+imap <Down>  <Nop>
+map  <Left>  <Nop>
+imap <Left>  <Nop>
+map  <Right> <Nop>
+imap <Right> <Nop>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>

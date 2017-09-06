@@ -1,0 +1,3 @@
+registry=http://nexus.etat-de-vaud.ch/repository/npm-group/
+@types:registry=https://registry.npmjs.org
+//nexus.etat-de-vaud.ch/repository/npm-vd/:_authToken=ff4f0931-da91-359a-bb84-cee9c3a95caf

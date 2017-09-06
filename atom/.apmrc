@@ -1,0 +1,2 @@
+strict-ssl=false
+https-proxy=http://localhost:3128/
