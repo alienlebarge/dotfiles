@@ -144,6 +144,15 @@ set smartcase
 
 
 
+" Customize commands
+
+" Allow to remove not empty directory when exploring
+let g:netrw_localrmdir="rm -r"
+
+
+
+
+
 " Set relevant filetypes
 
 autocmd BufRead, BufNewFile *.md set filetype=markdown
