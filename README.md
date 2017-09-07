@@ -28,6 +28,7 @@ So, to recap, the install script will:
 ## Installation
 
     git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
+    git submodule update --init --recursive
     cd ~/dotfiles
     ./makesymlinks.sh
 
