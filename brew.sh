@@ -36,6 +36,9 @@ brew install ponysay
 # a replacement for `ls`
 brew install exa
 
+# Install Ack
+# https://beyondgrep.com/
+brew install ack
 # Install latest version of Vim
 brew install vim --with-override-system-vi
 
