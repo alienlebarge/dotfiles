@@ -44,6 +44,14 @@ I use [SquidMan](http://squidman.net) for my proxy connections.
 To install atom's package, simply run `$ apm stars --install`.  
 It will install [my stars](https://atom.io/users/alienlebarge/stars).
 
+## Vim
+
+Pathogen is used to load Vim plugin. So to install a new one, simply run the 
+following command:
+
+```
+git submodule add https://github.com/<repo/url> vim/bundle/<plugin>
+```
 ### Update packages
 
 1. `$ (sudo) apm update`
