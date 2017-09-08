@@ -57,6 +57,26 @@ set nrformats-=octal
 
 
 
+
+" Buffer management
+
+" Open splits to the right or below; more natural than the default
+set splitright
+set splitbelow
+
+" Show file options above the command line
+set wildmenu
+
+" Don’t offer to open certain files/directories
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+set wildignore+=*.pdf,*.psd
+set wildignore+=*.map,*.min.css
+set wildignore+=node_modules/*,bower_components/*
+
+
+
+
+
 " Interactions
 
 " Start scrolling slightly before the cursor reaches an edge
