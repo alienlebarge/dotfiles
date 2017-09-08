@@ -166,7 +166,20 @@ augroup END
 
 
 
-" Key mappings
+
+
+" Abbreviations
+iabbrev /*1 /* [1] */
+iabbrev /*2 /* [2] */
+iabbrev /*3 /* [3] */
+iabbrev /*4 /* [4] */
+iabbrev /*5 /* [5] */
+
+
+
+
+
+"Key mappings
 
 " Disable arrow keys (hardcore)
 map  <Up>    <Nop>
