@@ -202,6 +202,9 @@ iabbrev /*5 /* [5] */
 " Docblock
 iabbrev /** /**<Return><Space>*<Return>*/<Esc>k$a
 
+" `%%` is the directory of the current file
+cabbr <expr> %% fnameescape(expand('%:p:h'))
+
 
 
 
