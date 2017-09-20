@@ -82,10 +82,10 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    `hyperpower`,
     `hyperlinks`,
     `hyper-statusline`,
-    `hyper-snazzy`
+    `hyper-snazzy`,
+    `hyper-solarized-dark`
   ],
 
   // in development, you can create a directory under
