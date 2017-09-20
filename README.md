@@ -27,15 +27,20 @@ So, to recap, the install script will:
 
 ## Installation
 
-    git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
-    git submodule update --init --recursive
-    cd ~/dotfiles
-    ./makesymlinks.sh
+    $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
+    $ git submodule update --init --recursive
+    $ cd ~/dotfiles
+    $ ./makesymlinks.sh
 
+## Update
+
+    $ git pull
+    $ git submodule foreach git pull
 
 ## Home vs. Work
 
-I work behind a proxy. So if you do not need any proxy settings, you have to walk through all files and remove all proxy configurations.
+I work behind a proxy. So if you do not need any proxy settings, you have to 
+walk through all files and remove all proxy configurations.
 
 I use [SquidMan](http://squidman.net) for my proxy connections.
 
@@ -64,7 +69,8 @@ $ sudo chown -R `whoami` /Users/myuser/dotfiles/atom/
 
 ## Install Homebrew formulae
 
-To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
+To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of 
+course):
 
 ```
 $ ./brew.sh
@@ -75,11 +81,14 @@ If you get an error when running it, try to `$ sudo chmod 755 brew.sh` it.
 
 ### Git
 
-It's installed via Homebrew to get the laetest version (see [Install Homebrew formulae](#install-homebrew-formulae)).
+It's installed via Homebrew to get the laetest version (see [Install Homebrew 
+formulae](#install-homebrew-formulae)).
 
 #### GitHub Config
 
-Use this [config](https://help.github.com/articles/caching-your-github-password-in-git/) to cache the password.
+Use this 
+[config](https://help.github.com/articles/caching-your-github-password-in-git/) 
+to cache the password.
 
 ## Credits
 
