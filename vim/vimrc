@@ -142,6 +142,10 @@ autocmd FileType gitcommit set colorcolumn+=51
 " Highlight current line
 set cursorline
 
+" Don't let indentLine plugin disable quotes in json files
+" https://github.com/Yggdroot/indentLine/issues/172
+let g:vim_json_syntax_conceal = 0
+
 
 
 
