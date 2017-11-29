@@ -75,7 +75,7 @@
 	r = checkout -- .
 [user]
 	name = Cédric Aellen
-	email = cedric.aellen@alienlebarge.ch
+	email = cedric.aellen@vd.ch
 [push]
 	default = current
 [color]
@@ -88,3 +88,12 @@
 	editor = vim
 [credential]
 	helper = osxkeychain
+[http]
+	proxy = http://localhost:3128
+[https]
+	proxy = http://localhost:3128
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
