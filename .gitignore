@@ -1,5 +1,6 @@
 .DS_Store
 
+atom/.apmrc
 atom/.apm
 atom/.apm/.apmrc
 atom/.node-gyp
