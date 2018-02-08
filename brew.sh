@@ -39,8 +39,12 @@ brew install exa
 # Install Ack
 # https://beyondgrep.com/
 brew install ack
+
 # Install latest version of Vim
 brew install vim --with-override-system-vi
+
+# Install ghi: View your repo’s GitHub issues on the command line
+brew install ghi
 
 # Remove outdated versions from the cellar.
 brew cleanup
