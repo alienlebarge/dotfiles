@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "vim/bundle/dracula-theme"]
+	path = vim/bundle/dracula-theme
+	url = https://github.com/dracula/vim.git

@@ -14,8 +14,7 @@ set fileencoding=utf-8
 
 " Enable syntax highlghting
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme dracula
 
 " Set airline theme
 let g:airline_theme='solarized'
@@ -28,6 +27,10 @@ highlight Comment cterm=italic
 highlight Comment gui=italic
 highlight htmlArg cterm=italic
 highlight htmlArg gui=italic
+
+" Override spelling style
+highlight clear SpellBad
+highlight SpellBad cterm=underline
 
 
 
