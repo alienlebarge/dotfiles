@@ -1,3 +1,9 @@
+" Use Vim settings, rather than Vi settings
+set nocompatible
+
+
+
+
 " Setup
 
 " Let's us Pathogen
@@ -6,6 +12,25 @@ execute pathogen#infect()
 " Use UTF-8 by default
 set encoding=utf-8
 set fileencoding=utf-8
+
+" Automatically re-read ﬁles if unmodiﬁed inside Vim.
+set autoread
+
+" Display a conﬁrmation dialog when closing an unsaved ﬁle.
+set confirm
+
+" Ignore ﬁle’s mode lines; use vimrc conﬁgurations instead.
+set nomodeline
+
+" Record swapfiles there
+set directory=$HOME/.vim/swp//
+
+" Do not use backup
+set nobackup
+
+" enable project speficific vimrc
+set exrc
+
 
 
 
@@ -38,12 +63,22 @@ highlight SpellBad cterm=underline
 
 " Text management
 
+" New lines inherit the indentation of previous lines.
+set autoindent
+
+" Smart auto indentation (instead of old smartindent option).
 filetype plugin indent on
 " 4 spaces please
+" On pressing tab, insert 4 spaces.
 set expandtab
+" When indenting with ‘>’, use 4 spaces width.
 set shiftwidth=4
+" Show existing tab with 4 spaces width.
 set tabstop=4
 set softtabstop=4
+
+" When shifting, indent using two spaces.
+set shiftwidth=2
 
 " Round indent to the nearest multiple of 4
 set shiftround
@@ -76,6 +111,11 @@ set wildignore+=*.pdf,*.psd
 set wildignore+=*.map,*.min.css
 set wildignore+=node_modules/*,bower_components/*
 
+" Manage multiple buffers effectively: the current buffer can be “sent” to the
+" background without writing to disk. When a background buffer becomes current
+" again, marks and undo-history are remembered.
+set hidden
+
 
 
 
@@ -99,6 +139,12 @@ set lazyredraw
 " Write swapfiles to disk a little sooner
 set updatetime=250
 
+" Set bigger history of executed commands
+set history=1000
+
+" Enable mouse for scrolling and resizing.
+set mouse=a
+
 
 
 
@@ -119,6 +165,9 @@ set statusline=%f\ %=Line\ %l/%L\ Col\ %c\ (%p%%)
 
 " Show file title in terminal tab
 set title
+
+" Maximum number of tab pages that can be opened from the command line.
+set tabpagemax=40
 
 " Show invisible
 set list
@@ -149,14 +198,19 @@ set cursorline
 " https://github.com/Yggdroot/indentLine/issues/172
 let g:vim_json_syntax_conceal = 0
 
+" Disable beep on errors.
+set noerrorbells
+" Flash the screen instead of beeping on errors.
+set visualbell
+
 
 
 
 
 " Search
 
-" Don’t keep results highlighted after searching...
-set nohlsearch
+" Highlight searches by default.
+set hlsearch
 
 " ...just highlight as we type
 set incsearch
