@@ -78,7 +78,7 @@
 	r = checkout -- .
 [user]
 	name = Cédric Aellen
-	email = cedric.aellen@alienlebarge.ch
+	email = cedric.aellen@vd.ch
 [push]
 	default = current
 [color]
