@@ -45,7 +45,8 @@ set exrc
 
 " Enable syntax highlghting
 syntax enable
-colorscheme dracula
+set background=dark
+colorscheme solarized
 
 " Set airline theme
 let g:airline_theme='solarized'
@@ -58,10 +59,6 @@ highlight Comment cterm=italic
 highlight Comment gui=italic
 highlight htmlArg cterm=italic
 highlight htmlArg gui=italic
-
-" Override spelling style
-highlight clear SpellBad
-highlight SpellBad cterm=underline
 
 
 
