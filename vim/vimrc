@@ -25,10 +25,11 @@ set nomodeline
 " Maintain undo history between sessions
 set undofile
 " Save undo file here
-" make sure to create this folder `$ mkdir ~/.vim/undodir'
+" make sure to create this folder '$ mkdir ~/.vim/undodir'
 set undodir=~/.vim/undodir
 
 " Record swapfiles there
+" Make sure to create this folder '$ mkdir ~/.vim/swp'
 set directory=$HOME/.vim/swp//
 
 " Do not use backup
