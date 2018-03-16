@@ -295,5 +295,11 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap gf :vertical wincmd f<CR>
 
 " Switch between previous and next  buffers using `Ctrl-j` and `Ctrl-k`
-map <C-K> :bprev<CR>
-map <C-J> :bnext<CR>
+"map <C-K> :bprev<CR>
+"map <C-J> :bnext<CR>
+
+" Switching windows using `Ctrl-h`, `Ctrl-j`, `Ctrl-k` and `Ctrl-l`
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
