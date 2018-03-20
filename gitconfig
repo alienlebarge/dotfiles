@@ -8,8 +8,8 @@
     # Show the diff between the latest commit and the current state
     d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-    # Show the diff between the latest commit and the current state
-    dw = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --word-diff --patch-with-stat"
+    # Nicer diffs for prose
+    wd = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --word-diff --patch-with-stat"
 
     # `git di $number` shows the diff between the state `$number` revisions ago and the current state
     di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
@@ -64,6 +64,24 @@
 
     # List contributors with number of commits
     contributors = shortlog --summary --numbered
+
+    # Show your ten most recently checked out branches
+    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+
+    # See everything everyone has done recently
+    overview = log --oneline --no-merges
+
+    # See today’s work
+    today = log --since=\"00:00:00\" --all --no-merges --oneline --author="Aellen"
+
+    # See everything I have done recently
+    recap = log --oneline --no-merges --author="Aellen"
+
+    # See which commits are on the remote that aren’t on your local branch
+    upstream = "! git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
+
+    # See which commits are on your local branch that aren’t on the remote
+    local = "! git log --oneline --no-merges origin/$(git rev-parse --abbrev-ref HEAD).."
 
     # Merge GitHub pull request on top of the `master` branch
     mpr = "!f() { \
