@@ -51,4 +51,4 @@ brew cleanup
 
 # create dir for vim
 mkdir ~/.vim/undodir
-mkdir ~/vim/swap
+mkdir ~/.vim/swap

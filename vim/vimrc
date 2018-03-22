@@ -32,7 +32,7 @@ set undodir=~/.vim/undodir
 " Record swapfiles there
 " Make sure to create this folder '$ mkdir ~/.vim/swp'
 " the dir is created in via `brew.sh`
-set directory=$HOME/.vim/swp//
+set directory=$HOME/.vim/swp
 
 " Do not use backup
 set nobackup
