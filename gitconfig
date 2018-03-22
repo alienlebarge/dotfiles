@@ -98,8 +98,8 @@
     # Revert all local change
     r = checkout -- .
 [user]
-    name = Cédric Aellen
-    email = cedric.aellen@alienlebarge.ch
+	name = Cédric Aellen
+	email = cedric.aellen@alienlebarge.ch
 [push]
     default = current
 [color]
@@ -111,7 +111,7 @@
 [core]
     editor = vim
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
