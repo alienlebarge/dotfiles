@@ -48,3 +48,7 @@ brew install ghi
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# create dir for vim
+mkdir ~/.vim/undodir
+mkdir ~/vim/swap
