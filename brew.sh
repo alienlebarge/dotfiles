@@ -21,6 +21,7 @@ brew install node
 
 # Install Git
 brew install git
+brew install git-flow
 
 # Install Ruby
 brew install ruby
