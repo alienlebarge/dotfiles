@@ -37,6 +37,3 @@
 [submodule "vim/bundle/vim.typoscript"]
 	path = vim/bundle/vim.typoscript
 	url = https://github.com/elmar-hinz/vim.typoscript
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
