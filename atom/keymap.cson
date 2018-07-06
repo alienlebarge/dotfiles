@@ -1,2 +1,0 @@
-'atom-text-editor:not([mini])':
-  'tab': 'emmet:expand-abbreviation-with-tab'

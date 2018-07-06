@@ -1,17 +1,5 @@
 .DS_Store
 
-atom/.apmrc
-atom/.apm
-atom/.apm/.apmrc
-atom/.node-gyp
-atom/.storage
-atom/compile-cache/
-atom/packages
-atom/storage
-atom/themes
-extra
-atom/blob-store
-
 # Ignore Vim temporary files
 /vim/.netrwhist
 *.swp
