@@ -47,5 +47,9 @@ brew install vim --with-override-system-vi
 # Install ghi: View your repo’s GitHub issues on the command line
 brew install ghi
 
+# Install Git autocompletion
+# see https://apple.stackexchange.com/a/92637
+brew install git bash-completion
+
 # Remove outdated versions from the cellar.
 brew cleanup
