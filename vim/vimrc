@@ -36,6 +36,13 @@ set nobackup
 " enable project speficific vimrc
 set exrc
 
+" temporary fix
+" https://github.com/vim/vim/issues/3117
+" https://stackoverflow.com/questions/51210172/vim-error-error-detected-while-processing-function-snr14-useconfigfiles26
+if has ('python3')
+  silent! python3 1
+endif
+
 
 
 
