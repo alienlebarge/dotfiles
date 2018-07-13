@@ -147,6 +147,14 @@ set history=1000
 " Enable mouse for scrolling and resizing.
 set mouse=a
 
+" enable folding
+set foldenable
+" Open most of the folds by default If set to 0, all folds will be closed.
+set  foldlevelstart=10
+"Folds can be nested. Setting a max value protects you from too many folds.
+set  foldnestmax=10
+" Defines the type of folding.
+set  foldmethod=manual
 
 
 
