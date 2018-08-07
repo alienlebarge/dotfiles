@@ -13,3 +13,6 @@
 # To keep a directory, add a .gitkeep file to it and ignore the directory with a
 # wildcard: `path/to/dir/*` this will ignore content but not director itself.
 !/**/.gitkeep
+
+# Ignore specific config
+/extra
