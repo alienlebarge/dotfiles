@@ -247,7 +247,7 @@ set smartcase
 " Allow to remove not empty directory when exploring
 let g:netrw_localrmdir="rm -r"
 
-
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 
 
@@ -295,15 +295,15 @@ map  <Up>    <Nop>
 imap <Up>    <Nop>
 map  <Down>  <Nop>
 imap <Down>  <Nop>
-map  <Left>  <Nop>
-imap <Left>  <Nop>
-map  <Right> <Nop>
-imap <Right> <Nop>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 
+map  <Left>  <Nop>
+imap <Left>  <Nop>
+map  <Right> <Nop>
+imap <Right> <Nop>
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
