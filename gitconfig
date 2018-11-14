@@ -19,6 +19,9 @@
     # Show the diff between the current branch and the master
     dim = !"git diff origin/master"
 
+    # Show the diff between the current branch and the develop
+    did = !"git diff origin/develop"
+
     # Pull in remote changes for the current repository and all its submodules
     p = !"git pull; git submodule foreach git pull origin master"
 
