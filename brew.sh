@@ -62,3 +62,6 @@ brew install git bash-completion
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Install json, a fast CLI tool for working with JSON
+npm install ---global json
