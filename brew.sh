@@ -5,8 +5,15 @@
 # Ask for the administrator password upfront.
 sudo -v
 
-# Make sure we’re using the latest Homebrew.
-brew update
+# Check if Homebrew is installed
+which -s brew
+if [[ $? != 0 ]] ; then
+    # Install Homebrew if not installed
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    # Make sure we’re using the latest Homebrew.
+    brew update
+fi
 
 # Upgrade any already-installed formulae.
 brew upgrade
