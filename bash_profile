@@ -10,16 +10,6 @@ done;
 
 unset file;
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Import Ruby RVM profile
-# They ask to do that during RVM install
-source ~/.profile
-
-# Ruby rbenv configuration
-# see https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x
-eval "$(rbenv init -)"
-
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 	source "$(brew --prefix)/etc/bash_completion"
