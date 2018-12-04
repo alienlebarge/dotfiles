@@ -28,9 +28,10 @@ So, to recap, the install script will:
 ## Installation
 
     $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
-    $ git submodule update --init --recursive
     $ cd ~/dotfiles
+    $ git submodule update --init --recursive
     $ ./makesymlinks.sh
+    $ ./brew.sh
 
 ## Update
 
