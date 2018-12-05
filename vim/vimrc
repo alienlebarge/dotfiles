@@ -314,3 +314,7 @@ nnoremap <C-L> <C-W><C-L>
 " Select visualy some lines `V` and move them using `J` and `K`
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
