@@ -72,3 +72,7 @@ brew cleanup
 
 # Install json, a fast CLI tool for working with JSON
 npm install ---global json
+
+# Enable italics in terminal
+# see https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
+tic xterm-256color-italic.terminfo
