@@ -67,6 +67,15 @@
     # a.k.a. ‘delete merged’
     dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+    # Remove branches on the remote `origin` that have already been merged with origin/master
+    # see https://salferrarello.com/git-delete-merged-branches-from-remote/
+    dmo = "!git branch --all --merged remotes/origin/master | grep --invert-match master | grep --invert-match HEAD | grep "remotes/origin/" | cut -d "/" -f 3- | xargs -n 1 git push --delete origin"
+
+    # Remove branches on the remote `GitHub` that have already been merged with GitHub/master
+    # see https://salferrarello.com/git-delete-merged-branches-from-remote/
+    dmg  = "!git branch --all --merged remotes/GitHub/master | grep --invert-match master | grep --invert-match HEAD | grep "remotes/GitHub/" | cut -d "/" -f 3- | xargs -n 1 git push --delete GitHub"
+
+    # List contributors with number of commits
     # List contributors with number of commits
     contributors = shortlog --summary --numbered
 
