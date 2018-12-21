@@ -28,9 +28,10 @@ So, to recap, the install script will:
 ## Installation
 
     $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
-    $ git submodule update --init --recursive
     $ cd ~/dotfiles
+    $ git submodule update --init --recursive
     $ ./makesymlinks.sh
+    $ ./brew.sh
 
 ## Update
 
@@ -43,22 +44,6 @@ I work behind a proxy. So if you do not need any proxy settings, you have to
 walk through all files and remove all proxy configurations.
 
 I use [SquidMan](http://squidman.net) for my proxy connections.
-
-## Atom
-
-To install atom's package, simply run `$ apm stars --install`.  
-It will install [my stars](https://atom.io/users/alienlebarge/stars).
-
-
-### Update packages
-
-1. `$ (sudo) apm update`
-2. Restart Atom
-
-If you get some `Eaccess` errors, try 
-```
-$ sudo chown -R `whoami` /Users/myuser/dotfiles/atom/
-```
 
 ## Vim
 
