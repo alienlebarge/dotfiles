@@ -274,6 +274,11 @@ iabbrev /*5 /* [5] */
 " Docblock
 iabbrev /** /**<Return><Space>*<Return>*/<Esc>k$a
 
+“ Date and time
+iab <expr> dts strftime("%c")
+iab <expr> usdate strftime("%Y-%m-%d")
+iab <expr> uusdate strftime("%Y-%m-%d %H:%M:%S")
+
 " `%%` is the directory of the current file
 cabbr <expr> %% fnameescape(expand('%:p:h'))
 
