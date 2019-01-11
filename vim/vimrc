@@ -276,7 +276,6 @@ iabbrev /** /**<Return><Space>*<Return>*/<Esc>k$a
 
 " Date & time
 iabbrev /** /**<Return><Space>*<Return>*/<Esc>k$a
-iab <expr> dts strftime("%c")
 iab <expr> usdate strftime("%Y-%m-%d")
 iab <expr> uusdate strftime("%Y-%m-%d %H:%M:%S")
 
