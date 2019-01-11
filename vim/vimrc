@@ -264,6 +264,10 @@ augroup END
 
 iabbrev lipsum Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 
+" CSS section title
+iabbrev /*= /*<Space>==========================================================================<Esc>o<Space><Space><Space>#<Esc>o<Esc>0i<Space><Space><Space>==========================================================================<Space>*/<Esc>kA
+iabbrev /*- /*<Space>-------------------------------------<Esc>o<Space><Space><Space>#<Esc>o<Esc>0i<Space><Space><Space>-------------------------------------<Space>*/<Esc>kA
+
 " inline comm
 iabbrev /*1 /* [1] */
 iabbrev /*2 /* [2] */
