@@ -31,9 +31,6 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "vim/bundle/vim-colors-solarized"]
-	path = vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim.typoscript"]
 	path = vim/bundle/vim.typoscript
 	url = https://github.com/elmar-hinz/vim.typoscript
@@ -43,3 +40,9 @@
 [submodule "vim/bundle/vim-css-color"]
 	path = vim/bundle/vim-css-color
 	url = https://github.com/ap/vim-css-color.git
+[submodule "vim/bundle/vim-polyglot"]
+	path = vim/bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/bundle/nova-vim"]
+	path = vim/bundle/nova-vim
+	url = https://github.com/trevordmiller/nova-vim.git
