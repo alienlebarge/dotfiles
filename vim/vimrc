@@ -207,6 +207,7 @@ set cursorline
 " Don't let indentLine plugin disable quotes in json files
 " https://github.com/Yggdroot/indentLine/issues/172
 let g:vim_json_syntax_conceal = 0
+let g:indentLine_setConceal = 0
 
 " Disable beep on errors.
 set noerrorbells
