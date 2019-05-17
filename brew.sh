@@ -73,6 +73,11 @@ brew cleanup
 # Install json, a fast CLI tool for working with JSON
 npm install ---global json
 
+# Install trash
+# https://github.com/sindresorhus/trash
+npm install --global trash
+npm install --global trash-cli
+
 # Enable italics in terminal
 # see https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
 tic xterm-256color-italic.terminfo
