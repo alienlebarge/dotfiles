@@ -67,6 +67,9 @@ brew install terminal-notifier
 # see https://apple.stackexchange.com/a/92637
 brew install git bash-completion
 
+# Install heroku tools
+brew tap heroku/brew && brew install heroku
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
