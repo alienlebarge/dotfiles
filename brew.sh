@@ -68,6 +68,7 @@ brew install terminal-notifier
 brew install git bash-completion
 
 # Install heroku tools
+# https://devcenter.heroku.com/articles/heroku-cli
 brew tap heroku/brew && brew install heroku
 
 # Remove outdated versions from the cellar.
