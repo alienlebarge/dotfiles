@@ -29,6 +29,7 @@ brew install node
 # Install Git
 brew install git
 brew install git-flow
+brew install git-lfs
 
 # Install Ruby
 brew install ruby
