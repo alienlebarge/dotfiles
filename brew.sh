@@ -50,7 +50,9 @@ brew install exa
 brew install ack
 
 # Install latest version of Vim
-brew install vim --with-override-system-vi
+brew install vim
+# Install Python for Vim
+xcode-select --install
 
 # Install ghi: View your repo’s GitHub issues on the command line
 brew install ghi
