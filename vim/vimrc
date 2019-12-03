@@ -308,6 +308,8 @@ map  <Left>  <Nop>
 imap <Left>  <Nop>
 map  <Right> <Nop>
 imap <Right> <Nop>
+" Avoid typing `jjjjjj` or `kkkkkkkkkk` by using vim-hardtime plugin
+let g:hardtime_default_on = 1
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
