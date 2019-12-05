@@ -131,7 +131,3 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
-[http]
-	proxy = http://localhost:3128
-[https]
-	proxy = http://localhost:3128
