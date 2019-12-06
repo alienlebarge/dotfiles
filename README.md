@@ -57,7 +57,7 @@ git submodule add https://github.com/<repo/url> vim/bundle/<plugin>
 ### Update Vim packages
 
 ```
-$ git submodule update --recursive --remote
+$ ./brew.sh
 ```
 ## Install Homebrew formulae
 
