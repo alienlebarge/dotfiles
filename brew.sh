@@ -74,6 +74,23 @@ brew install git bash-completion
 # https://devcenter.heroku.com/articles/heroku-cli
 brew tap heroku/brew && brew install heroku
 
+# install things nedded at work
+read -p "Are you at work?" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    # installe https://github.com/Homebrew/homebrew-services
+    brew services
+
+    # install and start cntlm at login
+    brew cntlm
+    brew services start cntlm
+
+    # install and start squid at login
+    brew squid
+    brew services start squid
+fi
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
@@ -91,3 +108,5 @@ tic xterm-256color-italic.terminfo
 
 # Pull all submodules (vim plugins)
 git submodule update --init --recursive
+
+
