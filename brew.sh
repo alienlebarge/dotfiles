@@ -79,7 +79,7 @@ read -p "Are you at work?" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    # installe https://github.com/Homebrew/homebrew-services
+    # install https://github.com/Homebrew/homebrew-services
     brew tap homebrew/services
 
     # install and start cntlm at login
