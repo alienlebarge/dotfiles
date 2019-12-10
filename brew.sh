@@ -80,14 +80,14 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     # installe https://github.com/Homebrew/homebrew-services
-    brew services
+    brew install services
 
     # install and start cntlm at login
-    brew cntlm
+    brew install cntlm
     brew services start cntlm
 
     # install and start squid at login
-    brew squid
+    brew install squid
     brew services start squid
 fi
 
