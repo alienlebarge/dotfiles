@@ -104,5 +104,3 @@ tic xterm-256color-italic.terminfo
 
 # Pull all submodules (vim plugins)
 git submodule update --init --recursive
-
-
