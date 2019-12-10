@@ -88,3 +88,6 @@ npm install --global trash-cli
 # Enable italics in terminal
 # see https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
 tic xterm-256color-italic.terminfo
+
+# Pull all submodules (vim plugins)
+git submodule update --init --recursive
