@@ -85,10 +85,6 @@ then
     # install and start cntlm at login
     brew install cntlm
     brew services start cntlm
-
-    # install and start squid at login
-    brew install squid
-    brew services start squid
 fi
 
 # Remove outdated versions from the cellar.
