@@ -80,7 +80,7 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     # installe https://github.com/Homebrew/homebrew-services
-    brew install services
+    brew tap homebrew/services
 
     # install and start cntlm at login
     brew install cntlm
