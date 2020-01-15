@@ -104,3 +104,6 @@ tic xterm-256color-italic.terminfo
 
 # Pull all submodules (vim plugins)
 git submodule update --init --recursive
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
