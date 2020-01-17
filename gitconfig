@@ -113,7 +113,7 @@
     r = checkout -- .
 [user]
 	name = Cédric Aellen
-	email = cedric.aellen@vd.ch
+	email = cedric.aellen@alienlebarge.ch
 [push]
     default = current
 [color]
@@ -131,7 +131,3 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
-[http]
-	proxy = http://localhost:3128
-[https]
-	proxy = http://localhost:3128
