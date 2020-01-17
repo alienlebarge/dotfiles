@@ -22,9 +22,11 @@ brew upgrade
 # http://hisham.hm/htop/
 brew install htop
 
-# Install Node.js. Note: this installs `npm` too, using the recommended
-# installation method.
-brew install node
+# Uninstall node and npm. We are now using nvm
+# see https://stackoverflow.com/a/48736639/498415
+# must be removed in the futur
+brew uninstall --force node
+brew uninstall --force npm
 
 # Install Git
 brew install git
@@ -90,6 +92,29 @@ fi
 # Remove outdated versions from the cellar.
 brew cleanup
 
+# Enable italics in terminal
+# see https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
+tic xterm-256color-italic.terminfo
+
+# Pull all submodules (vim plugins)
+git submodule update --init --recursive
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+
+# loads bash_completion to not have to restart terminal
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Install latest LTS node version
+nvm install --lts
+nvm use --lts
+
+
+
+## Installations via npm 
+
 # Install json, a fast CLI tool for working with JSON
 npm install ---global json
 
@@ -97,10 +122,3 @@ npm install ---global json
 # https://github.com/sindresorhus/trash
 npm install --global trash
 npm install --global trash-cli
-
-# Enable italics in terminal
-# see https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
-tic xterm-256color-italic.terminfo
-
-# Pull all submodules (vim plugins)
-git submodule update --init --recursive
