@@ -31,6 +31,9 @@ brew install git
 brew install git-flow
 brew install git-lfs
 
+# Install lazygit
+brew install lazygit
+
 # Install Ruby
 brew install ruby
 
