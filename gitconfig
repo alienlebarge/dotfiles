@@ -111,6 +111,9 @@
 
     # Revert all local change
     r = checkout -- .
+
+    # Revert and remove untracked files and directories
+    rd = "!git checkout -- . && git clean -fd"
 [user]
 	name = Cédric Aellen
 	email = cedric.aellen@alienlebarge.ch
