@@ -249,9 +249,9 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " Set relevant filetypes
 
-autocmd BufRead, BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 "autocmd BufRead, BufNewFile *.hbs set filetype=html
-autocmd BufRead, BufNewFile *.html,*.htm,*.shtml,*.stm,*.nunj set filetype=jinja
+autocmd BufRead,BufNewFile *.html,*.htm,*.shtml,*.stm,*.nunj set filetype=jinja
 
 " Use Sass syntax for `.css` files because PostCSS !
 augroup filetypedetect
