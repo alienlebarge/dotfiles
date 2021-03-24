@@ -47,18 +47,17 @@ I use [SquidMan](http://squidman.net) for my proxy connections.
 
 ## Vim
 
-Pathogen is used to load Vim plugin. So to install a new one, simply run the 
-following command:
+### Plugins
 
-```
-git submodule add https://github.com/<repo/url> vim/bundle/<plugin>
-```
+Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug).
+If you need to add a new plugin, simply add it in the `.vimrc` files.
 
 ### Update Vim packages
 
 ```
 $ ./brew.sh
 ```
+
 ## Install Homebrew formulae
 
 To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of 
