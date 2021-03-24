@@ -23,7 +23,6 @@ Plug 'takac/vim-hardtime'
 Plug 'lepture/vim-jinja'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-surround'
-Plug 'helmich/typo3-typoscript-lint'
 
 call plug#end()
 
