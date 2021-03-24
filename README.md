@@ -50,7 +50,16 @@ I use [SquidMan](http://squidman.net) for my proxy connections.
 ### Plugins
 
 Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug).
-If you need to add a new plugin, simply add it in the `.vimrc` files.
+
+#### Install plugin
+
+If you need to add a new plugin, simply add it in the `.vimrc` file and run
+`:PlugInstall` in Vim.
+
+#### Uninstall plugin
+
+Delete the Plug line(s) from your '.vimrc', source the `.vimrc` and call 
+`:PlugClean``
 
 ### Update Vim packages
 
