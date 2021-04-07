@@ -17,6 +17,7 @@ if has('python3') && has('timers')
 else
   echoerr 'pathfinder.vim is not supported on this Vim installation'
 endif
+Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'alvan/vim-closetag'
@@ -100,6 +101,7 @@ set autoindent
 
 " Smart auto indentation (instead of old smartindent option).
 filetype plugin indent on
+filetype plugin on
 " 4 spaces please
 " On pressing tab, insert 4 spaces.
 set expandtab
@@ -361,3 +363,39 @@ vnoremap K :m '<-2<CR>gv=gv
 " Make `jj` and `jk` throw you into normal mode
 inoremap jj <esc>
 inoremap jk <esc>
+
+
+
+
+"Plugin config
+
+
+
+"Nerd Commenter
+
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+"let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
