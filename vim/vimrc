@@ -59,7 +59,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 " Record swapfiles there
-set directory=$HOME/.vim/swp//
+set directory^=$HOME/.vim/swp//
 
 " Do not use backup
 set nobackup
