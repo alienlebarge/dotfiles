@@ -71,7 +71,7 @@ brew install terminal-notifier
 
 # Install Git autocompletion
 # see https://apple.stackexchange.com/a/92637
-brew install bash-completion@2
+brew install bash-completion
 
 # Install heroku tools
 # https://devcenter.heroku.com/articles/heroku-cli
