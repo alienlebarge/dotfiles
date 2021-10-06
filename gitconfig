@@ -114,21 +114,31 @@
 
     # Revert and remove untracked files and directories
     rd = "!git checkout -- . && git clean -fd"
+
 [user]
 	name = Cédric Aellen
 	email = cedric.aellen@alienlebarge.ch
+
 [push]
     default = current
+
+[pull]
+    rebase = true
+
 [color]
     ui = true
+
 [filter "media"]
     clean = git media clean %f
     smudge = git media smudge %f
     required = true
+
 [core]
     editor = vim
+
 [credential]
 	helper = osxkeychain
+
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
