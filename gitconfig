@@ -116,8 +116,8 @@
     rd = "!git checkout -- . && git clean -fd"
 
 [user]
-	name = Cédric Aellen
-	email = cedric.aellen@alienlebarge.ch
+    name = Cédric Aellen
+    mail = cedric.aellen@alienlebarge.ch
 
 [push]
     default = current
@@ -137,7 +137,7 @@
     editor = vim
 
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
