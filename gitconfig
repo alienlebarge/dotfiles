@@ -116,8 +116,9 @@
     rd = "!git checkout -- . && git clean -fd"
 
 [user]
-    name = Cédric Aellen
+	name = Cédric Aellen
     mail = cedric.aellen@alienlebarge.ch
+	email = cedric.aellen@alienlebarge.ch
 
 [push]
     default = current
