@@ -137,7 +137,7 @@
     editor = vim
 
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
