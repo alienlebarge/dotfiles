@@ -66,7 +66,7 @@ brew install lynx
 # Install Hugo framework to build websites
 brew install hugo
 
-# Install notifier to send User Notifications on macOS from the command-line. 
+# Install notifier to send User Notifications on macOS from the command-line.
 brew install terminal-notifier
 
 # Install Git autocompletion
