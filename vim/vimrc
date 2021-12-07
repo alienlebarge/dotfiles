@@ -171,7 +171,7 @@ set whichwrap=h,l,b,<,>,~,[,]
 set lazyredraw
 
 " Write swapfiles to disk a little sooner
-set updatetime=250
+" set updatetime=250
 
 " Set bigger history of executed commands
 set history=1000
