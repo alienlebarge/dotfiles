@@ -147,3 +147,7 @@
     required = true
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = false
+[gpg]
+	program = /usr/local/bin/gpg
