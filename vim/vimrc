@@ -28,7 +28,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'lepture/vim-jinja'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-surround'
-
+Plug 'sainnhe/everforest'
 call plug#end()
 
 
@@ -75,11 +75,10 @@ set exrc
 
 " Enable syntax highlghting
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme everforest
 
 " Set airline theme
-let g:airline_theme='solarized'
+let g:airline_theme='everforest'
 
 "Show matching penrens, brackets, etc.
 set showmatch
