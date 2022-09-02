@@ -320,6 +320,10 @@ iab <expr> uusdate strftime("%Y-%m-%d %H:%M:%S")
 " `%%` is the directory of the current file
 cabbr <expr> %% fnameescape(expand('%:p:h'))
 
+" Comments in Droid files
+:autocmd FileType droid
+  \ :iabbrev <buffer> #- #<Space>--------------------------------------------------<Return>#<Space>--------------------------------------------------<Esc>O#
+
 
 
 
