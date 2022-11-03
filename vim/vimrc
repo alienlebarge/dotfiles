@@ -403,3 +403,13 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+
+
+" Minimap.vim
+" Required https://github.com/wfxr/code-minimap see https://github.com/wfxr/minimap.vim
+
+let g:minimap_auto_start = 1
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
