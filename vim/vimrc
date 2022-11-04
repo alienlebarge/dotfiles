@@ -28,6 +28,7 @@ Plug 'lepture/vim-jinja'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-surround'
 Plug 'sainnhe/everforest'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 
