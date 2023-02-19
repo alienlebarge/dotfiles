@@ -69,11 +69,11 @@
 
     # Remove branches on the remote `origin` that have already been merged with origin/master
     # see https://salferrarello.com/git-delete-merged-branches-from-remote/
-    dmo = "!git branch --all --merged remotes/origin/master | grep --invert-match master | grep --invert-match HEAD | grep "remotes/origin/" | cut -d "/" -f 3- | xargs -n 1 git push --delete origin"
+    dmo = "!git branch --all --merged remotes/origin/main | grep --invert-match main | grep --invert-match HEAD | grep "remotes/origin/" | cut -d "/" -f 3- | xargs -n 1 git push --delete origin"
 
     # Remove branches on the remote `GitHub` that have already been merged with GitHub/master
     # see https://salferrarello.com/git-delete-merged-branches-from-remote/
-    dmg  = "!git branch --all --merged remotes/GitHub/master | grep --invert-match master | grep --invert-match HEAD | grep "remotes/GitHub/" | cut -d "/" -f 3- | xargs -n 1 git push --delete GitHub"
+    dmg  = "!git branch --all --merged remotes/GitHub/main | grep --invert-match main | grep --invert-match HEAD | grep "remotes/GitHub/" | cut -d "/" -f 3- | xargs -n 1 git push --delete GitHub"
 
     # List contributors with number of commits
     # List contributors with number of commits
