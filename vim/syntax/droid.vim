@@ -31,13 +31,14 @@ syn match number /\(on\|off\|-\?\([0-9]\|[1-9][0-9]*\)\(\.[0-9]\+\)\?[V%]\?\)/ c
 
 syn match ioregister "[ion][1-8]" contained
 syn match ioregister "r[1-9]" contained
-syn match ioregister "r[12][0-9]" contained
-syn match ioregister "r3[0-2]" contained
+syn match ioregister "r[1234][0-9]" contained
+syn match ioregister "r5[0-6]" contained
 syn match ioregister "g[1-9]" contained
 syn match ioregister "g1[012]" contained
+syn match ioregister "g[1-4]\.[1-8]" contained
 syn match ioregister "x1" contained
-syn match ioregister "[lb]\(1[1-6]\|[1-9]\)\.\([1-2][0-9]\|3[0-2]\|[1-9]\)" contained
-syn match ioregister  "[ps]\(1[1-6]\|[1-9]\)\.\(10\|[1-9]\)" contained
+syn match ioregister "[lb]\(1[0-6]\|[1-9]\)\.\([1-2][0-9]\|3[0-2]\|[1-9]\)" contained
+syn match ioregister  "[ps]\(1[0-6]\|[1-9]\)\.\(10\|[1-9]\)" contained
 
 syn match cable "_[a-z][a-z0-9_]*" contained
 
@@ -56,6 +57,8 @@ syn match p2b8Header /\[p2b8\]/
 hi def link p2b8Header circuitHeader
 syn match p4b2Header /\[p4b2\]/
 hi def link p4b2Header circuitHeader
+syn match p8s8Header /\[p8s8\]/
+hi def link p8s8Header circuitHeader
 syn match b32Header /\[b32\]/
 hi def link b32Header circuitHeader
 syn match p10Header /\[p10\]/
@@ -63,6 +66,8 @@ hi def link p10Header circuitHeader
 syn match s10Header /\[s10\]/
 hi def link s10Header circuitHeader
 syn match m4Header /\[m4\]/
+hi def link e4Header circuitHeader
+syn match e4Header /\[e4\]/
 hi def link m4Header circuitHeader
 syn match x7Header /\[x7\]/
 hi def link x7Header circuitHeader
@@ -120,154 +125,20 @@ hi def link chordInputParameter inputParameter
 hi def link chordOutputParameter outputParameter
 
 
-" buttongroup
-syn match buttongroupInputParameter "^\s*button" contained
-syn match buttongroupInputParameter "^\s*button1" contained
-syn match buttongroupInputParameter "^\s*button10" contained
-syn match buttongroupInputParameter "^\s*button11" contained
-syn match buttongroupInputParameter "^\s*button12" contained
-syn match buttongroupInputParameter "^\s*button13" contained
-syn match buttongroupInputParameter "^\s*button14" contained
-syn match buttongroupInputParameter "^\s*button15" contained
-syn match buttongroupInputParameter "^\s*button16" contained
-syn match buttongroupInputParameter "^\s*button17" contained
-syn match buttongroupInputParameter "^\s*button18" contained
-syn match buttongroupInputParameter "^\s*button19" contained
-syn match buttongroupInputParameter "^\s*button2" contained
-syn match buttongroupInputParameter "^\s*button20" contained
-syn match buttongroupInputParameter "^\s*button21" contained
-syn match buttongroupInputParameter "^\s*button22" contained
-syn match buttongroupInputParameter "^\s*button23" contained
-syn match buttongroupInputParameter "^\s*button24" contained
-syn match buttongroupInputParameter "^\s*button25" contained
-syn match buttongroupInputParameter "^\s*button26" contained
-syn match buttongroupInputParameter "^\s*button27" contained
-syn match buttongroupInputParameter "^\s*button28" contained
-syn match buttongroupInputParameter "^\s*button29" contained
-syn match buttongroupInputParameter "^\s*button3" contained
-syn match buttongroupInputParameter "^\s*button30" contained
-syn match buttongroupInputParameter "^\s*button31" contained
-syn match buttongroupInputParameter "^\s*button32" contained
-syn match buttongroupInputParameter "^\s*button4" contained
-syn match buttongroupInputParameter "^\s*button5" contained
-syn match buttongroupInputParameter "^\s*button6" contained
-syn match buttongroupInputParameter "^\s*button7" contained
-syn match buttongroupInputParameter "^\s*button8" contained
-syn match buttongroupInputParameter "^\s*button9" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput1" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput10" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput11" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput12" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput13" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput14" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput15" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput16" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput17" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput18" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput19" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput2" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput20" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput21" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput22" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput23" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput24" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput25" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput26" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput27" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput28" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput29" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput3" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput30" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput31" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput32" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput4" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput5" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput6" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput7" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput8" contained
-syn match buttongroupOutputParameter "^\s*buttonoutput9" contained
-syn match buttongroupOutputParameter "^\s*buttonpress" contained
-syn match buttongroupOutputParameter "^\s*led" contained
-syn match buttongroupOutputParameter "^\s*led1" contained
-syn match buttongroupOutputParameter "^\s*led10" contained
-syn match buttongroupOutputParameter "^\s*led11" contained
-syn match buttongroupOutputParameter "^\s*led12" contained
-syn match buttongroupOutputParameter "^\s*led13" contained
-syn match buttongroupOutputParameter "^\s*led14" contained
-syn match buttongroupOutputParameter "^\s*led15" contained
-syn match buttongroupOutputParameter "^\s*led16" contained
-syn match buttongroupOutputParameter "^\s*led17" contained
-syn match buttongroupOutputParameter "^\s*led18" contained
-syn match buttongroupOutputParameter "^\s*led19" contained
-syn match buttongroupOutputParameter "^\s*led2" contained
-syn match buttongroupOutputParameter "^\s*led20" contained
-syn match buttongroupOutputParameter "^\s*led21" contained
-syn match buttongroupOutputParameter "^\s*led22" contained
-syn match buttongroupOutputParameter "^\s*led23" contained
-syn match buttongroupOutputParameter "^\s*led24" contained
-syn match buttongroupOutputParameter "^\s*led25" contained
-syn match buttongroupOutputParameter "^\s*led26" contained
-syn match buttongroupOutputParameter "^\s*led27" contained
-syn match buttongroupOutputParameter "^\s*led28" contained
-syn match buttongroupOutputParameter "^\s*led29" contained
-syn match buttongroupOutputParameter "^\s*led3" contained
-syn match buttongroupOutputParameter "^\s*led30" contained
-syn match buttongroupOutputParameter "^\s*led31" contained
-syn match buttongroupOutputParameter "^\s*led32" contained
-syn match buttongroupOutputParameter "^\s*led4" contained
-syn match buttongroupOutputParameter "^\s*led5" contained
-syn match buttongroupOutputParameter "^\s*led6" contained
-syn match buttongroupOutputParameter "^\s*led7" contained
-syn match buttongroupOutputParameter "^\s*led8" contained
-syn match buttongroupOutputParameter "^\s*led9" contained
-syn match buttongroupInputParameter "^\s*loadpreset" contained
-syn match buttongroupOutputParameter "^\s*longpress" contained
-syn match buttongroupInputParameter "^\s*maxactive" contained
-syn match buttongroupInputParameter "^\s*minactive" contained
-syn match buttongroupOutputParameter "^\s*output" contained
-syn match buttongroupInputParameter "^\s*preset" contained
-syn match buttongroupInputParameter "^\s*savepreset" contained
-syn match buttongroupInputParameter "^\s*select" contained
-syn match buttongroupInputParameter "^\s*selectat" contained
-syn match buttongroupInputParameter "^\s*value" contained
-syn match buttongroupInputParameter "^\s*value1" contained
-syn match buttongroupInputParameter "^\s*value10" contained
-syn match buttongroupInputParameter "^\s*value11" contained
-syn match buttongroupInputParameter "^\s*value12" contained
-syn match buttongroupInputParameter "^\s*value13" contained
-syn match buttongroupInputParameter "^\s*value14" contained
-syn match buttongroupInputParameter "^\s*value15" contained
-syn match buttongroupInputParameter "^\s*value16" contained
-syn match buttongroupInputParameter "^\s*value17" contained
-syn match buttongroupInputParameter "^\s*value18" contained
-syn match buttongroupInputParameter "^\s*value19" contained
-syn match buttongroupInputParameter "^\s*value2" contained
-syn match buttongroupInputParameter "^\s*value20" contained
-syn match buttongroupInputParameter "^\s*value21" contained
-syn match buttongroupInputParameter "^\s*value22" contained
-syn match buttongroupInputParameter "^\s*value23" contained
-syn match buttongroupInputParameter "^\s*value24" contained
-syn match buttongroupInputParameter "^\s*value25" contained
-syn match buttongroupInputParameter "^\s*value26" contained
-syn match buttongroupInputParameter "^\s*value27" contained
-syn match buttongroupInputParameter "^\s*value28" contained
-syn match buttongroupInputParameter "^\s*value29" contained
-syn match buttongroupInputParameter "^\s*value3" contained
-syn match buttongroupInputParameter "^\s*value30" contained
-syn match buttongroupInputParameter "^\s*value31" contained
-syn match buttongroupInputParameter "^\s*value32" contained
-syn match buttongroupInputParameter "^\s*value4" contained
-syn match buttongroupInputParameter "^\s*value5" contained
-syn match buttongroupInputParameter "^\s*value6" contained
-syn match buttongroupInputParameter "^\s*value7" contained
-syn match buttongroupInputParameter "^\s*value8" contained
-syn match buttongroupInputParameter "^\s*value9" contained
-syn match buttongroupHeader /\[buttongroup\]/ contained
-syn region buttongroupCircuit start=/\[buttongroup\]/ end=/\[/me=s-1 transparent contains=buttongroupHeader,buttongroupInputParameter,buttongroupOutputParameter,ioregister,number,cable,comment
-hi def link buttongroupHeader circuitHeader
-hi def link buttongroupInputParameter inputParameter
-hi def link buttongroupOutputParameter outputParameter
+" octave
+syn match octaveInputParameter "^\s*detune" contained
+syn match octaveInputParameter "^\s*fifths" contained
+syn match octaveInputParameter "^\s*input" contained
+syn match octaveOutputParameter "^\s*output" contained
+syn match octaveOutputParameter "^\s*output1" contained
+syn match octaveOutputParameter "^\s*output2" contained
+syn match octaveOutputParameter "^\s*output3" contained
+syn match octaveInputParameter "^\s*spread" contained
+syn match octaveHeader /\[octave\]/ contained
+syn region octaveCircuit start=/\[octave\]/ end=/\[/me=s-1 transparent contains=octaveHeader,octaveInputParameter,octaveOutputParameter,ioregister,number,cable,comment
+hi def link octaveHeader circuitHeader
+hi def link octaveInputParameter inputParameter
+hi def link octaveOutputParameter outputParameter
 
 
 " midiout
@@ -415,6 +286,8 @@ syn match midioutInputParameter "^\s*start" contained
 syn match midioutInputParameter "^\s*stop" contained
 syn match midioutInputParameter "^\s*systemreset" contained
 syn match midioutInputParameter "^\s*triggerdelay" contained
+syn match midioutInputParameter "^\s*trs" contained
+syn match midioutInputParameter "^\s*updateccs" contained
 syn match midioutInputParameter "^\s*updaterate" contained
 syn match midioutInputParameter "^\s*usb" contained
 syn match midioutInputParameter "^\s*velocity" contained
@@ -510,43 +383,6 @@ hi def link randomInputParameter inputParameter
 hi def link randomOutputParameter outputParameter
 
 
-" arpeggio
-syn match arpeggioInputParameter "^\s*butterfly" contained
-syn match arpeggioInputParameter "^\s*clock" contained
-syn match arpeggioInputParameter "^\s*degree" contained
-syn match arpeggioInputParameter "^\s*direction" contained
-syn match arpeggioInputParameter "^\s*drop" contained
-syn match arpeggioInputParameter "^\s*octaves" contained
-syn match arpeggioOutputParameter "^\s*output" contained
-syn match arpeggioInputParameter "^\s*pattern" contained
-syn match arpeggioInputParameter "^\s*pingpong" contained
-syn match arpeggioInputParameter "^\s*pitch" contained
-syn match arpeggioInputParameter "^\s*range" contained
-syn match arpeggioInputParameter "^\s*reset" contained
-syn match arpeggioInputParameter "^\s*root" contained
-syn match arpeggioInputParameter "^\s*select1" contained
-syn match arpeggioInputParameter "^\s*select11" contained
-syn match arpeggioInputParameter "^\s*select13" contained
-syn match arpeggioInputParameter "^\s*select3" contained
-syn match arpeggioInputParameter "^\s*select5" contained
-syn match arpeggioInputParameter "^\s*select7" contained
-syn match arpeggioInputParameter "^\s*select9" contained
-syn match arpeggioInputParameter "^\s*selectfill1" contained
-syn match arpeggioInputParameter "^\s*selectfill2" contained
-syn match arpeggioInputParameter "^\s*selectfill3" contained
-syn match arpeggioInputParameter "^\s*selectfill4" contained
-syn match arpeggioInputParameter "^\s*selectfill5" contained
-syn match arpeggioInputParameter "^\s*startnote" contained
-syn match arpeggioInputParameter "^\s*transpose" contained
-syn match arpeggioInputParameter "^\s*tuningmode" contained
-syn match arpeggioInputParameter "^\s*tuningpitch" contained
-syn match arpeggioHeader /\[arpeggio\]/ contained
-syn region arpeggioCircuit start=/\[arpeggio\]/ end=/\[/me=s-1 transparent contains=arpeggioHeader,arpeggioInputParameter,arpeggioOutputParameter,ioregister,number,cable,comment
-hi def link arpeggioHeader circuitHeader
-hi def link arpeggioInputParameter inputParameter
-hi def link arpeggioOutputParameter outputParameter
-
-
 " faderbank
 syn match faderbankOutputParameter "^\s*button" contained
 syn match faderbankOutputParameter "^\s*button1" contained
@@ -565,6 +401,9 @@ syn match faderbankOutputParameter "^\s*button6" contained
 syn match faderbankOutputParameter "^\s*button7" contained
 syn match faderbankOutputParameter "^\s*button8" contained
 syn match faderbankOutputParameter "^\s*button9" contained
+syn match faderbankInputParameter "^\s*clear" contained
+syn match faderbankInputParameter "^\s*clearall" contained
+syn match faderbankInputParameter "^\s*dontsave" contained
 syn match faderbankInputParameter "^\s*firstfader" contained
 syn match faderbankInputParameter "^\s*ledcolor" contained
 syn match faderbankInputParameter "^\s*ledvalue" contained
@@ -604,7 +443,6 @@ syn match faderbankOutputParameter "^\s*output7" contained
 syn match faderbankOutputParameter "^\s*output8" contained
 syn match faderbankOutputParameter "^\s*output9" contained
 syn match faderbankInputParameter "^\s*preset" contained
-syn match faderbankInputParameter "^\s*reset" contained
 syn match faderbankInputParameter "^\s*savepreset" contained
 syn match faderbankInputParameter "^\s*select" contained
 syn match faderbankInputParameter "^\s*selectat" contained
@@ -645,6 +483,8 @@ hi def link foldOutputParameter outputParameter
 
 " droid
 syn match droidInputParameter "^\s*calibrate" contained
+syn match droidInputParameter "^\s*clear" contained
+syn match droidInputParameter "^\s*clearall" contained
 syn match droidInputParameter "^\s*ledbrightness" contained
 syn match droidInputParameter "^\s*lpfilter" contained
 syn match droidInputParameter "^\s*lpfilter1" contained
@@ -666,6 +506,7 @@ syn match droidInputParameter "^\s*maxslope5" contained
 syn match droidInputParameter "^\s*maxslope6" contained
 syn match droidInputParameter "^\s*maxslope7" contained
 syn match droidInputParameter "^\s*maxslope8" contained
+syn match droidInputParameter "^\s*startx7upgrade" contained
 syn match droidHeader /\[droid\]/ contained
 syn region droidCircuit start=/\[droid\]/ end=/\[/me=s-1 transparent contains=droidHeader,droidInputParameter,droidOutputParameter,ioregister,number,cable,comment
 hi def link droidHeader circuitHeader
@@ -673,34 +514,25 @@ hi def link droidInputParameter inputParameter
 hi def link droidOutputParameter outputParameter
 
 
-" superjust
-syn match superjustInputParameter "^\s*bypass" contained
-syn match superjustInputParameter "^\s*input" contained
-syn match superjustInputParameter "^\s*input1" contained
-syn match superjustInputParameter "^\s*input2" contained
-syn match superjustInputParameter "^\s*input3" contained
-syn match superjustInputParameter "^\s*input4" contained
-syn match superjustInputParameter "^\s*input5" contained
-syn match superjustInputParameter "^\s*input6" contained
-syn match superjustInputParameter "^\s*input7" contained
-syn match superjustInputParameter "^\s*input8" contained
-syn match superjustOutputParameter "^\s*output" contained
-syn match superjustOutputParameter "^\s*output1" contained
-syn match superjustOutputParameter "^\s*output2" contained
-syn match superjustOutputParameter "^\s*output3" contained
-syn match superjustOutputParameter "^\s*output4" contained
-syn match superjustOutputParameter "^\s*output5" contained
-syn match superjustOutputParameter "^\s*output6" contained
-syn match superjustOutputParameter "^\s*output7" contained
-syn match superjustOutputParameter "^\s*output8" contained
-syn match superjustInputParameter "^\s*transpose" contained
-syn match superjustInputParameter "^\s*tuningmode" contained
-syn match superjustInputParameter "^\s*tuningpitch" contained
-syn match superjustHeader /\[superjust\]/ contained
-syn region superjustCircuit start=/\[superjust\]/ end=/\[/me=s-1 transparent contains=superjustHeader,superjustInputParameter,superjustOutputParameter,ioregister,number,cable,comment
-hi def link superjustHeader circuitHeader
-hi def link superjustInputParameter inputParameter
-hi def link superjustOutputParameter outputParameter
+" mixer
+syn match mixerOutputParameter "^\s*average" contained
+syn match mixerInputParameter "^\s*input" contained
+syn match mixerInputParameter "^\s*input1" contained
+syn match mixerInputParameter "^\s*input2" contained
+syn match mixerInputParameter "^\s*input3" contained
+syn match mixerInputParameter "^\s*input4" contained
+syn match mixerInputParameter "^\s*input5" contained
+syn match mixerInputParameter "^\s*input6" contained
+syn match mixerInputParameter "^\s*input7" contained
+syn match mixerInputParameter "^\s*input8" contained
+syn match mixerOutputParameter "^\s*maximum" contained
+syn match mixerOutputParameter "^\s*minimum" contained
+syn match mixerOutputParameter "^\s*output" contained
+syn match mixerHeader /\[mixer\]/ contained
+syn region mixerCircuit start=/\[mixer\]/ end=/\[/me=s-1 transparent contains=mixerHeader,mixerInputParameter,mixerOutputParameter,ioregister,number,cable,comment
+hi def link mixerHeader circuitHeader
+hi def link mixerInputParameter inputParameter
+hi def link mixerOutputParameter outputParameter
 
 
 " sequencer
@@ -821,6 +653,9 @@ syn match matrixmixerInputParameter "^\s*button41" contained
 syn match matrixmixerInputParameter "^\s*button42" contained
 syn match matrixmixerInputParameter "^\s*button43" contained
 syn match matrixmixerInputParameter "^\s*button44" contained
+syn match matrixmixerInputParameter "^\s*clear" contained
+syn match matrixmixerInputParameter "^\s*clearall" contained
+syn match matrixmixerInputParameter "^\s*dontsave" contained
 syn match matrixmixerInputParameter "^\s*input" contained
 syn match matrixmixerInputParameter "^\s*input1" contained
 syn match matrixmixerInputParameter "^\s*input2" contained
@@ -854,7 +689,6 @@ syn match matrixmixerOutputParameter "^\s*output2" contained
 syn match matrixmixerOutputParameter "^\s*output3" contained
 syn match matrixmixerOutputParameter "^\s*output4" contained
 syn match matrixmixerInputParameter "^\s*preset" contained
-syn match matrixmixerInputParameter "^\s*reset" contained
 syn match matrixmixerInputParameter "^\s*savepreset" contained
 syn match matrixmixerInputParameter "^\s*select" contained
 syn match matrixmixerInputParameter "^\s*selectat" contained
@@ -887,6 +721,9 @@ syn match fadermatrixOutputParameter "^\s*button41" contained
 syn match fadermatrixOutputParameter "^\s*button42" contained
 syn match fadermatrixOutputParameter "^\s*button43" contained
 syn match fadermatrixOutputParameter "^\s*button44" contained
+syn match fadermatrixInputParameter "^\s*clear" contained
+syn match fadermatrixInputParameter "^\s*clearall" contained
+syn match fadermatrixInputParameter "^\s*dontsave" contained
 syn match fadermatrixInputParameter "^\s*firstfader" contained
 syn match fadermatrixInputParameter "^\s*ledcolor" contained
 syn match fadermatrixInputParameter "^\s*ledcolor1" contained
@@ -944,6 +781,11 @@ syn match fadermatrixInputParameter "^\s*rowcolumn" contained
 syn match fadermatrixInputParameter "^\s*savepreset" contained
 syn match fadermatrixInputParameter "^\s*select" contained
 syn match fadermatrixInputParameter "^\s*selectat" contained
+syn match fadermatrixInputParameter "^\s*startvalue" contained
+syn match fadermatrixInputParameter "^\s*startvalue1" contained
+syn match fadermatrixInputParameter "^\s*startvalue2" contained
+syn match fadermatrixInputParameter "^\s*startvalue3" contained
+syn match fadermatrixInputParameter "^\s*startvalue4" contained
 syn match fadermatrixHeader /\[fadermatrix\]/ contained
 syn region fadermatrixCircuit start=/\[fadermatrix\]/ end=/\[/me=s-1 transparent contains=fadermatrixHeader,fadermatrixInputParameter,fadermatrixOutputParameter,ioregister,number,cable,comment
 hi def link fadermatrixHeader circuitHeader
@@ -992,46 +834,81 @@ hi def link contourInputParameter inputParameter
 hi def link contourOutputParameter outputParameter
 
 
-" queue
-syn match queueInputParameter "^\s*clock" contained
-syn match queueInputParameter "^\s*input" contained
-syn match queueOutputParameter "^\s*output" contained
-syn match queueOutputParameter "^\s*output1" contained
-syn match queueOutputParameter "^\s*output2" contained
-syn match queueOutputParameter "^\s*output3" contained
-syn match queueOutputParameter "^\s*output4" contained
-syn match queueOutputParameter "^\s*output5" contained
-syn match queueOutputParameter "^\s*output6" contained
-syn match queueOutputParameter "^\s*output7" contained
-syn match queueOutputParameter "^\s*output8" contained
-syn match queueInputParameter "^\s*outputpos" contained
-syn match queueInputParameter "^\s*outputpos1" contained
-syn match queueInputParameter "^\s*outputpos2" contained
-syn match queueInputParameter "^\s*outputpos3" contained
-syn match queueInputParameter "^\s*outputpos4" contained
-syn match queueInputParameter "^\s*outputpos5" contained
-syn match queueInputParameter "^\s*outputpos6" contained
-syn match queueInputParameter "^\s*outputpos7" contained
-syn match queueInputParameter "^\s*outputpos8" contained
-syn match queueHeader /\[queue\]/ contained
-syn region queueCircuit start=/\[queue\]/ end=/\[/me=s-1 transparent contains=queueHeader,queueInputParameter,queueOutputParameter,ioregister,number,cable,comment
-hi def link queueHeader circuitHeader
-hi def link queueInputParameter inputParameter
-hi def link queueOutputParameter outputParameter
+" select
+syn match selectInputParameter "^\s*input" contained
+syn match selectOutputParameter "^\s*output" contained
+syn match selectInputParameter "^\s*select" contained
+syn match selectInputParameter "^\s*selectat" contained
+syn match selectHeader /\[select\]/ contained
+syn region selectCircuit start=/\[select\]/ end=/\[/me=s-1 transparent contains=selectHeader,selectInputParameter,selectOutputParameter,ioregister,number,cable,comment
+hi def link selectHeader circuitHeader
+hi def link selectInputParameter inputParameter
+hi def link selectOutputParameter outputParameter
+
+
+" notebuttons
+syn match notebuttonsInputParameter "^\s*button" contained
+syn match notebuttonsInputParameter "^\s*button1" contained
+syn match notebuttonsInputParameter "^\s*button10" contained
+syn match notebuttonsInputParameter "^\s*button11" contained
+syn match notebuttonsInputParameter "^\s*button12" contained
+syn match notebuttonsInputParameter "^\s*button2" contained
+syn match notebuttonsInputParameter "^\s*button3" contained
+syn match notebuttonsInputParameter "^\s*button4" contained
+syn match notebuttonsInputParameter "^\s*button5" contained
+syn match notebuttonsInputParameter "^\s*button6" contained
+syn match notebuttonsInputParameter "^\s*button7" contained
+syn match notebuttonsInputParameter "^\s*button8" contained
+syn match notebuttonsInputParameter "^\s*button9" contained
+syn match notebuttonsInputParameter "^\s*clear" contained
+syn match notebuttonsInputParameter "^\s*clearall" contained
+syn match notebuttonsInputParameter "^\s*clock" contained
+syn match notebuttonsInputParameter "^\s*dontsave" contained
+syn match notebuttonsOutputParameter "^\s*gate" contained
+syn match notebuttonsOutputParameter "^\s*led" contained
+syn match notebuttonsOutputParameter "^\s*led1" contained
+syn match notebuttonsOutputParameter "^\s*led10" contained
+syn match notebuttonsOutputParameter "^\s*led11" contained
+syn match notebuttonsOutputParameter "^\s*led12" contained
+syn match notebuttonsOutputParameter "^\s*led2" contained
+syn match notebuttonsOutputParameter "^\s*led3" contained
+syn match notebuttonsOutputParameter "^\s*led4" contained
+syn match notebuttonsOutputParameter "^\s*led5" contained
+syn match notebuttonsOutputParameter "^\s*led6" contained
+syn match notebuttonsOutputParameter "^\s*led7" contained
+syn match notebuttonsOutputParameter "^\s*led8" contained
+syn match notebuttonsOutputParameter "^\s*led9" contained
+syn match notebuttonsInputParameter "^\s*loadpreset" contained
+syn match notebuttonsOutputParameter "^\s*output" contained
+syn match notebuttonsInputParameter "^\s*preset" contained
+syn match notebuttonsInputParameter "^\s*savepreset" contained
+syn match notebuttonsInputParameter "^\s*select" contained
+syn match notebuttonsInputParameter "^\s*selectat" contained
+syn match notebuttonsOutputParameter "^\s*semitone" contained
+syn match notebuttonsInputParameter "^\s*startnote" contained
+syn match notebuttonsHeader /\[notebuttons\]/ contained
+syn region notebuttonsCircuit start=/\[notebuttons\]/ end=/\[/me=s-1 transparent contains=notebuttonsHeader,notebuttonsInputParameter,notebuttonsOutputParameter,ioregister,number,cable,comment
+hi def link notebuttonsHeader circuitHeader
+hi def link notebuttonsInputParameter inputParameter
+hi def link notebuttonsOutputParameter outputParameter
 
 
 " nudge
 syn match nudgeInputParameter "^\s*amount" contained
 syn match nudgeInputParameter "^\s*buttondown" contained
 syn match nudgeInputParameter "^\s*buttonup" contained
+syn match nudgeInputParameter "^\s*clear" contained
+syn match nudgeInputParameter "^\s*clearall" contained
+syn match nudgeInputParameter "^\s*dontsave" contained
 syn match nudgeOutputParameter "^\s*leddown" contained
 syn match nudgeOutputParameter "^\s*ledup" contained
+syn match nudgeInputParameter "^\s*loadpreset" contained
 syn match nudgeInputParameter "^\s*maximum" contained
 syn match nudgeInputParameter "^\s*minimum" contained
 syn match nudgeInputParameter "^\s*offset" contained
 syn match nudgeOutputParameter "^\s*output" contained
-syn match nudgeInputParameter "^\s*persist" contained
-syn match nudgeInputParameter "^\s*reset" contained
+syn match nudgeInputParameter "^\s*preset" contained
+syn match nudgeInputParameter "^\s*savepreset" contained
 syn match nudgeInputParameter "^\s*select" contained
 syn match nudgeInputParameter "^\s*selectat" contained
 syn match nudgeInputParameter "^\s*startvalue" contained
@@ -1043,15 +920,96 @@ hi def link nudgeInputParameter inputParameter
 hi def link nudgeOutputParameter outputParameter
 
 
+" superjust
+syn match superjustInputParameter "^\s*bypass" contained
+syn match superjustInputParameter "^\s*input" contained
+syn match superjustInputParameter "^\s*input1" contained
+syn match superjustInputParameter "^\s*input2" contained
+syn match superjustInputParameter "^\s*input3" contained
+syn match superjustInputParameter "^\s*input4" contained
+syn match superjustInputParameter "^\s*input5" contained
+syn match superjustInputParameter "^\s*input6" contained
+syn match superjustInputParameter "^\s*input7" contained
+syn match superjustInputParameter "^\s*input8" contained
+syn match superjustOutputParameter "^\s*output" contained
+syn match superjustOutputParameter "^\s*output1" contained
+syn match superjustOutputParameter "^\s*output2" contained
+syn match superjustOutputParameter "^\s*output3" contained
+syn match superjustOutputParameter "^\s*output4" contained
+syn match superjustOutputParameter "^\s*output5" contained
+syn match superjustOutputParameter "^\s*output6" contained
+syn match superjustOutputParameter "^\s*output7" contained
+syn match superjustOutputParameter "^\s*output8" contained
+syn match superjustInputParameter "^\s*transpose" contained
+syn match superjustInputParameter "^\s*tuningmode" contained
+syn match superjustInputParameter "^\s*tuningpitch" contained
+syn match superjustHeader /\[superjust\]/ contained
+syn region superjustCircuit start=/\[superjust\]/ end=/\[/me=s-1 transparent contains=superjustHeader,superjustInputParameter,superjustOutputParameter,ioregister,number,cable,comment
+hi def link superjustHeader circuitHeader
+hi def link superjustInputParameter inputParameter
+hi def link superjustOutputParameter outputParameter
+
+
+" switch
+syn match switchInputParameter "^\s*backward" contained
+syn match switchInputParameter "^\s*forward" contained
+syn match switchInputParameter "^\s*input" contained
+syn match switchInputParameter "^\s*input1" contained
+syn match switchInputParameter "^\s*input10" contained
+syn match switchInputParameter "^\s*input11" contained
+syn match switchInputParameter "^\s*input12" contained
+syn match switchInputParameter "^\s*input13" contained
+syn match switchInputParameter "^\s*input14" contained
+syn match switchInputParameter "^\s*input15" contained
+syn match switchInputParameter "^\s*input16" contained
+syn match switchInputParameter "^\s*input2" contained
+syn match switchInputParameter "^\s*input3" contained
+syn match switchInputParameter "^\s*input4" contained
+syn match switchInputParameter "^\s*input5" contained
+syn match switchInputParameter "^\s*input6" contained
+syn match switchInputParameter "^\s*input7" contained
+syn match switchInputParameter "^\s*input8" contained
+syn match switchInputParameter "^\s*input9" contained
+syn match switchInputParameter "^\s*offset" contained
+syn match switchOutputParameter "^\s*output" contained
+syn match switchOutputParameter "^\s*output1" contained
+syn match switchOutputParameter "^\s*output10" contained
+syn match switchOutputParameter "^\s*output11" contained
+syn match switchOutputParameter "^\s*output12" contained
+syn match switchOutputParameter "^\s*output13" contained
+syn match switchOutputParameter "^\s*output14" contained
+syn match switchOutputParameter "^\s*output15" contained
+syn match switchOutputParameter "^\s*output16" contained
+syn match switchOutputParameter "^\s*output2" contained
+syn match switchOutputParameter "^\s*output3" contained
+syn match switchOutputParameter "^\s*output4" contained
+syn match switchOutputParameter "^\s*output5" contained
+syn match switchOutputParameter "^\s*output6" contained
+syn match switchOutputParameter "^\s*output7" contained
+syn match switchOutputParameter "^\s*output8" contained
+syn match switchOutputParameter "^\s*output9" contained
+syn match switchInputParameter "^\s*reset" contained
+syn match switchHeader /\[switch\]/ contained
+syn region switchCircuit start=/\[switch\]/ end=/\[/me=s-1 transparent contains=switchHeader,switchInputParameter,switchOutputParameter,ioregister,number,cable,comment
+hi def link switchHeader circuitHeader
+hi def link switchInputParameter inputParameter
+hi def link switchOutputParameter outputParameter
+
+
 " calibrator
+syn match calibratorInputParameter "^\s*clear" contained
+syn match calibratorInputParameter "^\s*clearall" contained
+syn match calibratorInputParameter "^\s*dontsave" contained
 syn match calibratorInputParameter "^\s*input" contained
 syn match calibratorOutputParameter "^\s*leddown" contained
 syn match calibratorOutputParameter "^\s*ledup" contained
+syn match calibratorInputParameter "^\s*loadpreset" contained
 syn match calibratorInputParameter "^\s*nudgeamount" contained
 syn match calibratorInputParameter "^\s*nudgedown" contained
 syn match calibratorInputParameter "^\s*nudgeup" contained
 syn match calibratorOutputParameter "^\s*output" contained
-syn match calibratorInputParameter "^\s*reset" contained
+syn match calibratorInputParameter "^\s*preset" contained
+syn match calibratorInputParameter "^\s*savepreset" contained
 syn match calibratorInputParameter "^\s*select" contained
 syn match calibratorInputParameter "^\s*selectat" contained
 syn match calibratorInputParameter "^\s*tune" contained
@@ -1078,6 +1036,9 @@ hi def link calibratorOutputParameter outputParameter
 syn match motoquencerInputParameter "^\s*autoreset" contained
 syn match motoquencerInputParameter "^\s*buttonmode" contained
 syn match motoquencerInputParameter "^\s*clear" contained
+syn match motoquencerInputParameter "^\s*clearall" contained
+syn match motoquencerInputParameter "^\s*clearrepeats" contained
+syn match motoquencerInputParameter "^\s*clearskips" contained
 syn match motoquencerInputParameter "^\s*clearstartend" contained
 syn match motoquencerInputParameter "^\s*clock" contained
 syn match motoquencerInputParameter "^\s*composemode" contained
@@ -1089,9 +1050,11 @@ syn match motoquencerOutputParameter "^\s*cv" contained
 syn match motoquencerInputParameter "^\s*cvbase" contained
 syn match motoquencerInputParameter "^\s*cvnotches" contained
 syn match motoquencerInputParameter "^\s*cvrange" contained
+syn match motoquencerInputParameter "^\s*defaultcv" contained
 syn match motoquencerInputParameter "^\s*defaultgate" contained
 syn match motoquencerInputParameter "^\s*degree" contained
 syn match motoquencerInputParameter "^\s*direction" contained
+syn match motoquencerInputParameter "^\s*dontsave" contained
 syn match motoquencerInputParameter "^\s*endstep" contained
 syn match motoquencerOutputParameter "^\s*endstepout" contained
 syn match motoquencerInputParameter "^\s*fadermode" contained
@@ -1119,6 +1082,7 @@ syn match motoquencerInputParameter "^\s*luckyrandomizecv" contained
 syn match motoquencerInputParameter "^\s*luckyratchets" contained
 syn match motoquencerInputParameter "^\s*luckyrepeats" contained
 syn match motoquencerInputParameter "^\s*luckyreverse" contained
+syn match motoquencerInputParameter "^\s*luckyscope" contained
 syn match motoquencerInputParameter "^\s*luckyshuffle" contained
 syn match motoquencerInputParameter "^\s*luckyskips" contained
 syn match motoquencerInputParameter "^\s*luckyspread" contained
@@ -1186,43 +1150,57 @@ hi def link slewInputParameter inputParameter
 hi def link slewOutputParameter outputParameter
 
 
-" notebuttons
-syn match notebuttonsInputParameter "^\s*button" contained
-syn match notebuttonsInputParameter "^\s*button1" contained
-syn match notebuttonsInputParameter "^\s*button10" contained
-syn match notebuttonsInputParameter "^\s*button11" contained
-syn match notebuttonsInputParameter "^\s*button12" contained
-syn match notebuttonsInputParameter "^\s*button2" contained
-syn match notebuttonsInputParameter "^\s*button3" contained
-syn match notebuttonsInputParameter "^\s*button4" contained
-syn match notebuttonsInputParameter "^\s*button5" contained
-syn match notebuttonsInputParameter "^\s*button6" contained
-syn match notebuttonsInputParameter "^\s*button7" contained
-syn match notebuttonsInputParameter "^\s*button8" contained
-syn match notebuttonsInputParameter "^\s*button9" contained
-syn match notebuttonsInputParameter "^\s*clock" contained
-syn match notebuttonsOutputParameter "^\s*led" contained
-syn match notebuttonsOutputParameter "^\s*led1" contained
-syn match notebuttonsOutputParameter "^\s*led10" contained
-syn match notebuttonsOutputParameter "^\s*led11" contained
-syn match notebuttonsOutputParameter "^\s*led12" contained
-syn match notebuttonsOutputParameter "^\s*led2" contained
-syn match notebuttonsOutputParameter "^\s*led3" contained
-syn match notebuttonsOutputParameter "^\s*led4" contained
-syn match notebuttonsOutputParameter "^\s*led5" contained
-syn match notebuttonsOutputParameter "^\s*led6" contained
-syn match notebuttonsOutputParameter "^\s*led7" contained
-syn match notebuttonsOutputParameter "^\s*led8" contained
-syn match notebuttonsOutputParameter "^\s*led9" contained
-syn match notebuttonsOutputParameter "^\s*output" contained
-syn match notebuttonsInputParameter "^\s*select" contained
-syn match notebuttonsInputParameter "^\s*selectat" contained
-syn match notebuttonsOutputParameter "^\s*semitone" contained
-syn match notebuttonsHeader /\[notebuttons\]/ contained
-syn region notebuttonsCircuit start=/\[notebuttons\]/ end=/\[/me=s-1 transparent contains=notebuttonsHeader,notebuttonsInputParameter,notebuttonsOutputParameter,ioregister,number,cable,comment
-hi def link notebuttonsHeader circuitHeader
-hi def link notebuttonsInputParameter inputParameter
-hi def link notebuttonsOutputParameter outputParameter
+" delay
+syn match delayInputParameter "^\s*bypass" contained
+syn match delayInputParameter "^\s*clock" contained
+syn match delayInputParameter "^\s*cvin" contained
+syn match delayOutputParameter "^\s*cvout" contained
+syn match delayInputParameter "^\s*delay" contained
+syn match delayInputParameter "^\s*filenumber" contained
+syn match delayInputParameter "^\s*gatein" contained
+syn match delayInputParameter "^\s*gatein1" contained
+syn match delayInputParameter "^\s*gatein2" contained
+syn match delayInputParameter "^\s*gatein3" contained
+syn match delayInputParameter "^\s*gatein4" contained
+syn match delayInputParameter "^\s*gatein5" contained
+syn match delayInputParameter "^\s*gatein6" contained
+syn match delayInputParameter "^\s*gatein7" contained
+syn match delayInputParameter "^\s*gatein8" contained
+syn match delayOutputParameter "^\s*gateout" contained
+syn match delayOutputParameter "^\s*gateout1" contained
+syn match delayOutputParameter "^\s*gateout2" contained
+syn match delayOutputParameter "^\s*gateout3" contained
+syn match delayOutputParameter "^\s*gateout4" contained
+syn match delayOutputParameter "^\s*gateout5" contained
+syn match delayOutputParameter "^\s*gateout6" contained
+syn match delayOutputParameter "^\s*gateout7" contained
+syn match delayOutputParameter "^\s*gateout8" contained
+syn match delayInputParameter "^\s*load" contained
+syn match delayInputParameter "^\s*numberin" contained
+syn match delayOutputParameter "^\s*numberout" contained
+syn match delayOutputParameter "^\s*overflow" contained
+syn match delayInputParameter "^\s*sample" contained
+syn match delayInputParameter "^\s*save" contained
+syn match delayInputParameter "^\s*timewindow" contained
+syn match delayHeader /\[delay\]/ contained
+syn region delayCircuit start=/\[delay\]/ end=/\[/me=s-1 transparent contains=delayHeader,delayInputParameter,delayOutputParameter,ioregister,number,cable,comment
+hi def link delayHeader circuitHeader
+hi def link delayInputParameter inputParameter
+hi def link delayOutputParameter outputParameter
+
+
+" quantizer
+syn match quantizerInputParameter "^\s*bypass" contained
+syn match quantizerOutputParameter "^\s*changed" contained
+syn match quantizerInputParameter "^\s*input" contained
+syn match quantizerOutputParameter "^\s*output" contained
+syn match quantizerInputParameter "^\s*steps" contained
+syn match quantizerInputParameter "^\s*trigger" contained
+syn match quantizerHeader /\[quantizer\]/ contained
+syn region quantizerCircuit start=/\[quantizer\]/ end=/\[/me=s-1 transparent contains=quantizerHeader,quantizerInputParameter,quantizerOutputParameter,ioregister,number,cable,comment
+hi def link quantizerHeader circuitHeader
+hi def link quantizerInputParameter inputParameter
+hi def link quantizerOutputParameter outputParameter
 
 
 " adc
@@ -1302,78 +1280,67 @@ hi def link explinInputParameter inputParameter
 hi def link explinOutputParameter outputParameter
 
 
-" minifonion
-syn match minifonionInputParameter "^\s*bypass" contained
-syn match minifonionInputParameter "^\s*degree" contained
-syn match minifonionInputParameter "^\s*input" contained
-syn match minifonionOutputParameter "^\s*notechange" contained
-syn match minifonionInputParameter "^\s*noteshift" contained
-syn match minifonionOutputParameter "^\s*output" contained
-syn match minifonionInputParameter "^\s*root" contained
-syn match minifonionInputParameter "^\s*select1" contained
-syn match minifonionInputParameter "^\s*select11" contained
-syn match minifonionInputParameter "^\s*select13" contained
-syn match minifonionInputParameter "^\s*select3" contained
-syn match minifonionInputParameter "^\s*select5" contained
-syn match minifonionInputParameter "^\s*select7" contained
-syn match minifonionInputParameter "^\s*select9" contained
-syn match minifonionInputParameter "^\s*selectfill1" contained
-syn match minifonionInputParameter "^\s*selectfill2" contained
-syn match minifonionInputParameter "^\s*selectfill3" contained
-syn match minifonionInputParameter "^\s*selectfill4" contained
-syn match minifonionInputParameter "^\s*selectfill5" contained
-syn match minifonionInputParameter "^\s*selectnoteshift" contained
-syn match minifonionInputParameter "^\s*transpose" contained
-syn match minifonionInputParameter "^\s*trigger" contained
-syn match minifonionInputParameter "^\s*tuningmode" contained
-syn match minifonionInputParameter "^\s*tuningpitch" contained
-syn match minifonionHeader /\[minifonion\]/ contained
-syn region minifonionCircuit start=/\[minifonion\]/ end=/\[/me=s-1 transparent contains=minifonionHeader,minifonionInputParameter,minifonionOutputParameter,ioregister,number,cable,comment
-hi def link minifonionHeader circuitHeader
-hi def link minifonionInputParameter inputParameter
-hi def link minifonionOutputParameter outputParameter
-
-
-" potbank
-syn match potbankInputParameter "^\s*ledgauge" contained
-syn match potbankInputParameter "^\s*loadpreset" contained
-syn match potbankInputParameter "^\s*notch" contained
-syn match potbankOutputParameter "^\s*output" contained
-syn match potbankOutputParameter "^\s*output1" contained
-syn match potbankOutputParameter "^\s*output2" contained
-syn match potbankOutputParameter "^\s*output3" contained
-syn match potbankOutputParameter "^\s*output4" contained
-syn match potbankOutputParameter "^\s*output5" contained
-syn match potbankOutputParameter "^\s*output6" contained
-syn match potbankOutputParameter "^\s*output7" contained
-syn match potbankOutputParameter "^\s*output8" contained
-syn match potbankInputParameter "^\s*outputscale" contained
-syn match potbankInputParameter "^\s*pot" contained
-syn match potbankInputParameter "^\s*pot1" contained
-syn match potbankInputParameter "^\s*pot2" contained
-syn match potbankInputParameter "^\s*pot3" contained
-syn match potbankInputParameter "^\s*pot4" contained
-syn match potbankInputParameter "^\s*pot5" contained
-syn match potbankInputParameter "^\s*pot6" contained
-syn match potbankInputParameter "^\s*pot7" contained
-syn match potbankInputParameter "^\s*pot8" contained
-syn match potbankInputParameter "^\s*preset" contained
-syn match potbankInputParameter "^\s*reset" contained
-syn match potbankInputParameter "^\s*savepreset" contained
-syn match potbankInputParameter "^\s*select" contained
-syn match potbankInputParameter "^\s*selectat" contained
-syn match potbankInputParameter "^\s*startvalue" contained
-syn match potbankHeader /\[potbank\]/ contained
-syn region potbankCircuit start=/\[potbank\]/ end=/\[/me=s-1 transparent contains=potbankHeader,potbankInputParameter,potbankOutputParameter,ioregister,number,cable,comment
-hi def link potbankHeader circuitHeader
-hi def link potbankInputParameter inputParameter
-hi def link potbankOutputParameter outputParameter
+" recorder
+syn match recorderInputParameter "^\s*bypass" contained
+syn match recorderInputParameter "^\s*clock" contained
+syn match recorderInputParameter "^\s*cvin" contained
+syn match recorderOutputParameter "^\s*cvout" contained
+syn match recorderInputParameter "^\s*filenumber" contained
+syn match recorderInputParameter "^\s*gatein" contained
+syn match recorderInputParameter "^\s*gatein1" contained
+syn match recorderInputParameter "^\s*gatein2" contained
+syn match recorderInputParameter "^\s*gatein3" contained
+syn match recorderInputParameter "^\s*gatein4" contained
+syn match recorderInputParameter "^\s*gatein5" contained
+syn match recorderInputParameter "^\s*gatein6" contained
+syn match recorderInputParameter "^\s*gatein7" contained
+syn match recorderInputParameter "^\s*gatein8" contained
+syn match recorderOutputParameter "^\s*gateout" contained
+syn match recorderOutputParameter "^\s*gateout1" contained
+syn match recorderOutputParameter "^\s*gateout2" contained
+syn match recorderOutputParameter "^\s*gateout3" contained
+syn match recorderOutputParameter "^\s*gateout4" contained
+syn match recorderOutputParameter "^\s*gateout5" contained
+syn match recorderOutputParameter "^\s*gateout6" contained
+syn match recorderOutputParameter "^\s*gateout7" contained
+syn match recorderOutputParameter "^\s*gateout8" contained
+syn match recorderInputParameter "^\s*load" contained
+syn match recorderInputParameter "^\s*loop" contained
+syn match recorderInputParameter "^\s*mode" contained
+syn match recorderInputParameter "^\s*numberin" contained
+syn match recorderOutputParameter "^\s*numberout" contained
+syn match recorderOutputParameter "^\s*overflow" contained
+syn match recorderInputParameter "^\s*pause" contained
+syn match recorderInputParameter "^\s*playbackspeed" contained
+syn match recorderInputParameter "^\s*playbutton" contained
+syn match recorderOutputParameter "^\s*playled" contained
+syn match recorderInputParameter "^\s*recordbutton" contained
+syn match recorderOutputParameter "^\s*recordled" contained
+syn match recorderInputParameter "^\s*sample" contained
+syn match recorderInputParameter "^\s*save" contained
+syn match recorderInputParameter "^\s*scrub" contained
+syn match recorderInputParameter "^\s*scrubposition" contained
+syn match recorderInputParameter "^\s*select" contained
+syn match recorderInputParameter "^\s*selectat" contained
+syn match recorderInputParameter "^\s*stopbutton" contained
+syn match recorderOutputParameter "^\s*stopled" contained
+syn match recorderInputParameter "^\s*timewindow" contained
+syn match recorderInputParameter "^\s*trimend" contained
+syn match recorderInputParameter "^\s*trimstart" contained
+syn match recorderHeader /\[recorder\]/ contained
+syn region recorderCircuit start=/\[recorder\]/ end=/\[/me=s-1 transparent contains=recorderHeader,recorderInputParameter,recorderOutputParameter,ioregister,number,cable,comment
+hi def link recorderHeader circuitHeader
+hi def link recorderInputParameter inputParameter
+hi def link recorderOutputParameter outputParameter
 
 
 " pot
 syn match potOutputParameter "^\s*absbipolar" contained
 syn match potOutputParameter "^\s*bipolar" contained
+syn match potInputParameter "^\s*clear" contained
+syn match potInputParameter "^\s*clearall" contained
 syn match potInputParameter "^\s*discrete" contained
+syn match potInputParameter "^\s*dontsave" contained
 syn match potInputParameter "^\s*ledgauge" contained
 syn match potOutputParameter "^\s*lefthalf" contained
 syn match potOutputParameter "^\s*lefthalfinv" contained
@@ -1384,7 +1351,6 @@ syn match potOutputParameter "^\s*output" contained
 syn match potInputParameter "^\s*outputscale" contained
 syn match potInputParameter "^\s*pot" contained
 syn match potInputParameter "^\s*preset" contained
-syn match potInputParameter "^\s*reset" contained
 syn match potOutputParameter "^\s*righthalf" contained
 syn match potOutputParameter "^\s*righthalfinv" contained
 syn match potInputParameter "^\s*savepreset" contained
@@ -1653,6 +1619,23 @@ syn match firefacecontrolInputParameter "^\s*outputmix5in6" contained
 syn match firefacecontrolInputParameter "^\s*outputmix5in7" contained
 syn match firefacecontrolInputParameter "^\s*outputmix5in8" contained
 syn match firefacecontrolInputParameter "^\s*outputmix5in9" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in1" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in10" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in11" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in12" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in13" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in14" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in15" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in16" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in2" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in3" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in4" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in5" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in6" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in7" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in8" contained
+syn match firefacecontrolInputParameter "^\s*outputmix6in9" contained
 syn match firefacecontrolInputParameter "^\s*outputmix7in" contained
 syn match firefacecontrolInputParameter "^\s*outputmix7in1" contained
 syn match firefacecontrolInputParameter "^\s*outputmix7in10" contained
@@ -1704,23 +1687,6 @@ syn match firefacecontrolInputParameter "^\s*outputmix9in6" contained
 syn match firefacecontrolInputParameter "^\s*outputmix9in7" contained
 syn match firefacecontrolInputParameter "^\s*outputmix9in8" contained
 syn match firefacecontrolInputParameter "^\s*outputmix9in9" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin1" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin10" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin11" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin12" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin13" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin14" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin15" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin16" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin2" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin3" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin4" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin5" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin6" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin7" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin8" contained
-syn match firefacecontrolInputParameter "^\s*outputmixjin9" contained
 syn match firefacecontrolInputParameter "^\s*pan" contained
 syn match firefacecontrolInputParameter "^\s*pan1" contained
 syn match firefacecontrolInputParameter "^\s*pan10" contained
@@ -1891,20 +1857,160 @@ hi def link transientInputParameter inputParameter
 hi def link transientOutputParameter outputParameter
 
 
-" octave
-syn match octaveInputParameter "^\s*detune" contained
-syn match octaveInputParameter "^\s*fifths" contained
-syn match octaveInputParameter "^\s*input" contained
-syn match octaveOutputParameter "^\s*output" contained
-syn match octaveOutputParameter "^\s*output1" contained
-syn match octaveOutputParameter "^\s*output2" contained
-syn match octaveOutputParameter "^\s*output3" contained
-syn match octaveInputParameter "^\s*spread" contained
-syn match octaveHeader /\[octave\]/ contained
-syn region octaveCircuit start=/\[octave\]/ end=/\[/me=s-1 transparent contains=octaveHeader,octaveInputParameter,octaveOutputParameter,ioregister,number,cable,comment
-hi def link octaveHeader circuitHeader
-hi def link octaveInputParameter inputParameter
-hi def link octaveOutputParameter outputParameter
+" buttongroup
+syn match buttongroupInputParameter "^\s*button" contained
+syn match buttongroupInputParameter "^\s*button1" contained
+syn match buttongroupInputParameter "^\s*button10" contained
+syn match buttongroupInputParameter "^\s*button11" contained
+syn match buttongroupInputParameter "^\s*button12" contained
+syn match buttongroupInputParameter "^\s*button13" contained
+syn match buttongroupInputParameter "^\s*button14" contained
+syn match buttongroupInputParameter "^\s*button15" contained
+syn match buttongroupInputParameter "^\s*button16" contained
+syn match buttongroupInputParameter "^\s*button17" contained
+syn match buttongroupInputParameter "^\s*button18" contained
+syn match buttongroupInputParameter "^\s*button19" contained
+syn match buttongroupInputParameter "^\s*button2" contained
+syn match buttongroupInputParameter "^\s*button20" contained
+syn match buttongroupInputParameter "^\s*button21" contained
+syn match buttongroupInputParameter "^\s*button22" contained
+syn match buttongroupInputParameter "^\s*button23" contained
+syn match buttongroupInputParameter "^\s*button24" contained
+syn match buttongroupInputParameter "^\s*button25" contained
+syn match buttongroupInputParameter "^\s*button26" contained
+syn match buttongroupInputParameter "^\s*button27" contained
+syn match buttongroupInputParameter "^\s*button28" contained
+syn match buttongroupInputParameter "^\s*button29" contained
+syn match buttongroupInputParameter "^\s*button3" contained
+syn match buttongroupInputParameter "^\s*button30" contained
+syn match buttongroupInputParameter "^\s*button31" contained
+syn match buttongroupInputParameter "^\s*button32" contained
+syn match buttongroupInputParameter "^\s*button4" contained
+syn match buttongroupInputParameter "^\s*button5" contained
+syn match buttongroupInputParameter "^\s*button6" contained
+syn match buttongroupInputParameter "^\s*button7" contained
+syn match buttongroupInputParameter "^\s*button8" contained
+syn match buttongroupInputParameter "^\s*button9" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput1" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput10" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput11" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput12" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput13" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput14" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput15" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput16" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput17" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput18" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput19" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput2" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput20" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput21" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput22" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput23" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput24" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput25" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput26" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput27" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput28" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput29" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput3" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput30" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput31" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput32" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput4" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput5" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput6" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput7" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput8" contained
+syn match buttongroupOutputParameter "^\s*buttonoutput9" contained
+syn match buttongroupOutputParameter "^\s*buttonpress" contained
+syn match buttongroupInputParameter "^\s*clear" contained
+syn match buttongroupInputParameter "^\s*clearall" contained
+syn match buttongroupInputParameter "^\s*dontsave" contained
+syn match buttongroupOutputParameter "^\s*led" contained
+syn match buttongroupOutputParameter "^\s*led1" contained
+syn match buttongroupOutputParameter "^\s*led10" contained
+syn match buttongroupOutputParameter "^\s*led11" contained
+syn match buttongroupOutputParameter "^\s*led12" contained
+syn match buttongroupOutputParameter "^\s*led13" contained
+syn match buttongroupOutputParameter "^\s*led14" contained
+syn match buttongroupOutputParameter "^\s*led15" contained
+syn match buttongroupOutputParameter "^\s*led16" contained
+syn match buttongroupOutputParameter "^\s*led17" contained
+syn match buttongroupOutputParameter "^\s*led18" contained
+syn match buttongroupOutputParameter "^\s*led19" contained
+syn match buttongroupOutputParameter "^\s*led2" contained
+syn match buttongroupOutputParameter "^\s*led20" contained
+syn match buttongroupOutputParameter "^\s*led21" contained
+syn match buttongroupOutputParameter "^\s*led22" contained
+syn match buttongroupOutputParameter "^\s*led23" contained
+syn match buttongroupOutputParameter "^\s*led24" contained
+syn match buttongroupOutputParameter "^\s*led25" contained
+syn match buttongroupOutputParameter "^\s*led26" contained
+syn match buttongroupOutputParameter "^\s*led27" contained
+syn match buttongroupOutputParameter "^\s*led28" contained
+syn match buttongroupOutputParameter "^\s*led29" contained
+syn match buttongroupOutputParameter "^\s*led3" contained
+syn match buttongroupOutputParameter "^\s*led30" contained
+syn match buttongroupOutputParameter "^\s*led31" contained
+syn match buttongroupOutputParameter "^\s*led32" contained
+syn match buttongroupOutputParameter "^\s*led4" contained
+syn match buttongroupOutputParameter "^\s*led5" contained
+syn match buttongroupOutputParameter "^\s*led6" contained
+syn match buttongroupOutputParameter "^\s*led7" contained
+syn match buttongroupOutputParameter "^\s*led8" contained
+syn match buttongroupOutputParameter "^\s*led9" contained
+syn match buttongroupInputParameter "^\s*loadpreset" contained
+syn match buttongroupOutputParameter "^\s*longpress" contained
+syn match buttongroupInputParameter "^\s*longpresstime" contained
+syn match buttongroupInputParameter "^\s*maxactive" contained
+syn match buttongroupInputParameter "^\s*minactive" contained
+syn match buttongroupOutputParameter "^\s*output" contained
+syn match buttongroupInputParameter "^\s*preset" contained
+syn match buttongroupInputParameter "^\s*savepreset" contained
+syn match buttongroupInputParameter "^\s*select" contained
+syn match buttongroupInputParameter "^\s*selectat" contained
+syn match buttongroupOutputParameter "^\s*selectionchanged" contained
+syn match buttongroupInputParameter "^\s*startbutton" contained
+syn match buttongroupInputParameter "^\s*value" contained
+syn match buttongroupInputParameter "^\s*value1" contained
+syn match buttongroupInputParameter "^\s*value10" contained
+syn match buttongroupInputParameter "^\s*value11" contained
+syn match buttongroupInputParameter "^\s*value12" contained
+syn match buttongroupInputParameter "^\s*value13" contained
+syn match buttongroupInputParameter "^\s*value14" contained
+syn match buttongroupInputParameter "^\s*value15" contained
+syn match buttongroupInputParameter "^\s*value16" contained
+syn match buttongroupInputParameter "^\s*value17" contained
+syn match buttongroupInputParameter "^\s*value18" contained
+syn match buttongroupInputParameter "^\s*value19" contained
+syn match buttongroupInputParameter "^\s*value2" contained
+syn match buttongroupInputParameter "^\s*value20" contained
+syn match buttongroupInputParameter "^\s*value21" contained
+syn match buttongroupInputParameter "^\s*value22" contained
+syn match buttongroupInputParameter "^\s*value23" contained
+syn match buttongroupInputParameter "^\s*value24" contained
+syn match buttongroupInputParameter "^\s*value25" contained
+syn match buttongroupInputParameter "^\s*value26" contained
+syn match buttongroupInputParameter "^\s*value27" contained
+syn match buttongroupInputParameter "^\s*value28" contained
+syn match buttongroupInputParameter "^\s*value29" contained
+syn match buttongroupInputParameter "^\s*value3" contained
+syn match buttongroupInputParameter "^\s*value30" contained
+syn match buttongroupInputParameter "^\s*value31" contained
+syn match buttongroupInputParameter "^\s*value32" contained
+syn match buttongroupInputParameter "^\s*value4" contained
+syn match buttongroupInputParameter "^\s*value5" contained
+syn match buttongroupInputParameter "^\s*value6" contained
+syn match buttongroupInputParameter "^\s*value7" contained
+syn match buttongroupInputParameter "^\s*value8" contained
+syn match buttongroupInputParameter "^\s*value9" contained
+syn match buttongroupHeader /\[buttongroup\]/ contained
+syn region buttongroupCircuit start=/\[buttongroup\]/ end=/\[/me=s-1 transparent contains=buttongroupHeader,buttongroupInputParameter,buttongroupOutputParameter,ioregister,number,cable,comment
+hi def link buttongroupHeader circuitHeader
+hi def link buttongroupInputParameter inputParameter
+hi def link buttongroupOutputParameter outputParameter
 
 
 " timing
@@ -1939,15 +2045,28 @@ hi def link midithroughOutputParameter outputParameter
 
 " copy
 syn match copyInputParameter "^\s*input" contained
-syn match copyOutputParameter "^\s*inverted" contained
-syn match copyInputParameter "^\s*maximum" contained
-syn match copyInputParameter "^\s*minimum" contained
 syn match copyOutputParameter "^\s*output" contained
 syn match copyHeader /\[copy\]/ contained
 syn region copyCircuit start=/\[copy\]/ end=/\[/me=s-1 transparent contains=copyHeader,copyInputParameter,copyOutputParameter,ioregister,number,cable,comment
 hi def link copyHeader circuitHeader
 hi def link copyInputParameter inputParameter
 hi def link copyOutputParameter outputParameter
+
+
+" flipflop
+syn match flipflopInputParameter "^\s*clear" contained
+syn match flipflopInputParameter "^\s*load" contained
+syn match flipflopInputParameter "^\s*loadvalue" contained
+syn match flipflopOutputParameter "^\s*output" contained
+syn match flipflopInputParameter "^\s*reset" contained
+syn match flipflopInputParameter "^\s*set" contained
+syn match flipflopInputParameter "^\s*startvalue" contained
+syn match flipflopInputParameter "^\s*toggle" contained
+syn match flipflopHeader /\[flipflop\]/ contained
+syn region flipflopCircuit start=/\[flipflop\]/ end=/\[/me=s-1 transparent contains=flipflopHeader,flipflopInputParameter,flipflopOutputParameter,ioregister,number,cable,comment
+hi def link flipflopHeader circuitHeader
+hi def link flipflopInputParameter inputParameter
+hi def link flipflopOutputParameter outputParameter
 
 
 " midifileplayer
@@ -2049,15 +2168,6 @@ syn match midifileplayerOutputParameter "^\s*soft" contained
 syn match midifileplayerInputParameter "^\s*speed" contained
 syn match midifileplayerInputParameter "^\s*track" contained
 syn match midifileplayerInputParameter "^\s*transpose" contained
-syn match midifileplayerOutputParameter "^\s*trigger" contained
-syn match midifileplayerOutputParameter "^\s*trigger1" contained
-syn match midifileplayerOutputParameter "^\s*trigger2" contained
-syn match midifileplayerOutputParameter "^\s*trigger3" contained
-syn match midifileplayerOutputParameter "^\s*trigger4" contained
-syn match midifileplayerOutputParameter "^\s*trigger5" contained
-syn match midifileplayerOutputParameter "^\s*trigger6" contained
-syn match midifileplayerOutputParameter "^\s*trigger7" contained
-syn match midifileplayerOutputParameter "^\s*trigger8" contained
 syn match midifileplayerInputParameter "^\s*tuningmode" contained
 syn match midifileplayerInputParameter "^\s*tuningpitch" contained
 syn match midifileplayerOutputParameter "^\s*velocity" contained
@@ -2101,20 +2211,24 @@ hi def link cvlooperOutputParameter outputParameter
 
 " button
 syn match buttonInputParameter "^\s*button" contained
+syn match buttonInputParameter "^\s*clear" contained
+syn match buttonInputParameter "^\s*clearall" contained
+syn match buttonInputParameter "^\s*dontsave" contained
 syn match buttonInputParameter "^\s*doubleclickmode" contained
 syn match buttonOutputParameter "^\s*inverted" contained
 syn match buttonOutputParameter "^\s*led" contained
 syn match buttonInputParameter "^\s*loadpreset" contained
 syn match buttonOutputParameter "^\s*longpress" contained
+syn match buttonInputParameter "^\s*longpresstime" contained
 syn match buttonOutputParameter "^\s*negated" contained
 syn match buttonInputParameter "^\s*offvalue" contained
 syn match buttonInputParameter "^\s*onvalue" contained
 syn match buttonOutputParameter "^\s*output" contained
 syn match buttonInputParameter "^\s*preset" contained
-syn match buttonInputParameter "^\s*reset" contained
 syn match buttonInputParameter "^\s*savepreset" contained
 syn match buttonInputParameter "^\s*select" contained
 syn match buttonInputParameter "^\s*selectat" contained
+syn match buttonOutputParameter "^\s*shortpress" contained
 syn match buttonInputParameter "^\s*startvalue" contained
 syn match buttonInputParameter "^\s*states" contained
 syn match buttonInputParameter "^\s*value" contained
@@ -2127,6 +2241,71 @@ syn region buttonCircuit start=/\[button\]/ end=/\[/me=s-1 transparent contains=
 hi def link buttonHeader circuitHeader
 hi def link buttonInputParameter inputParameter
 hi def link buttonOutputParameter outputParameter
+
+
+" queue
+syn match queueInputParameter "^\s*clock" contained
+syn match queueInputParameter "^\s*input" contained
+syn match queueOutputParameter "^\s*output" contained
+syn match queueOutputParameter "^\s*output1" contained
+syn match queueOutputParameter "^\s*output2" contained
+syn match queueOutputParameter "^\s*output3" contained
+syn match queueOutputParameter "^\s*output4" contained
+syn match queueOutputParameter "^\s*output5" contained
+syn match queueOutputParameter "^\s*output6" contained
+syn match queueOutputParameter "^\s*output7" contained
+syn match queueOutputParameter "^\s*output8" contained
+syn match queueInputParameter "^\s*outputpos" contained
+syn match queueInputParameter "^\s*outputpos1" contained
+syn match queueInputParameter "^\s*outputpos2" contained
+syn match queueInputParameter "^\s*outputpos3" contained
+syn match queueInputParameter "^\s*outputpos4" contained
+syn match queueInputParameter "^\s*outputpos5" contained
+syn match queueInputParameter "^\s*outputpos6" contained
+syn match queueInputParameter "^\s*outputpos7" contained
+syn match queueInputParameter "^\s*outputpos8" contained
+syn match queueHeader /\[queue\]/ contained
+syn region queueCircuit start=/\[queue\]/ end=/\[/me=s-1 transparent contains=queueHeader,queueInputParameter,queueOutputParameter,ioregister,number,cable,comment
+hi def link queueHeader circuitHeader
+hi def link queueInputParameter inputParameter
+hi def link queueOutputParameter outputParameter
+
+
+" arpeggio
+syn match arpeggioInputParameter "^\s*butterfly" contained
+syn match arpeggioInputParameter "^\s*clock" contained
+syn match arpeggioInputParameter "^\s*degree" contained
+syn match arpeggioInputParameter "^\s*direction" contained
+syn match arpeggioInputParameter "^\s*drop" contained
+syn match arpeggioInputParameter "^\s*octaves" contained
+syn match arpeggioOutputParameter "^\s*output" contained
+syn match arpeggioInputParameter "^\s*pattern" contained
+syn match arpeggioInputParameter "^\s*pingpong" contained
+syn match arpeggioInputParameter "^\s*pitch" contained
+syn match arpeggioInputParameter "^\s*range" contained
+syn match arpeggioInputParameter "^\s*reset" contained
+syn match arpeggioInputParameter "^\s*root" contained
+syn match arpeggioInputParameter "^\s*select1" contained
+syn match arpeggioInputParameter "^\s*select11" contained
+syn match arpeggioInputParameter "^\s*select13" contained
+syn match arpeggioInputParameter "^\s*select3" contained
+syn match arpeggioInputParameter "^\s*select5" contained
+syn match arpeggioInputParameter "^\s*select7" contained
+syn match arpeggioInputParameter "^\s*select9" contained
+syn match arpeggioInputParameter "^\s*selectfill1" contained
+syn match arpeggioInputParameter "^\s*selectfill2" contained
+syn match arpeggioInputParameter "^\s*selectfill3" contained
+syn match arpeggioInputParameter "^\s*selectfill4" contained
+syn match arpeggioInputParameter "^\s*selectfill5" contained
+syn match arpeggioInputParameter "^\s*startnote" contained
+syn match arpeggioInputParameter "^\s*transpose" contained
+syn match arpeggioInputParameter "^\s*tuningmode" contained
+syn match arpeggioInputParameter "^\s*tuningpitch" contained
+syn match arpeggioHeader /\[arpeggio\]/ contained
+syn region arpeggioCircuit start=/\[arpeggio\]/ end=/\[/me=s-1 transparent contains=arpeggioHeader,arpeggioInputParameter,arpeggioOutputParameter,ioregister,number,cable,comment
+hi def link arpeggioHeader circuitHeader
+hi def link arpeggioInputParameter inputParameter
+hi def link arpeggioOutputParameter outputParameter
 
 
 " polytool
@@ -2207,40 +2386,6 @@ hi def link polytoolInputParameter inputParameter
 hi def link polytoolOutputParameter outputParameter
 
 
-" mixer
-syn match mixerOutputParameter "^\s*average" contained
-syn match mixerInputParameter "^\s*input" contained
-syn match mixerInputParameter "^\s*input1" contained
-syn match mixerInputParameter "^\s*input2" contained
-syn match mixerInputParameter "^\s*input3" contained
-syn match mixerInputParameter "^\s*input4" contained
-syn match mixerInputParameter "^\s*input5" contained
-syn match mixerInputParameter "^\s*input6" contained
-syn match mixerInputParameter "^\s*input7" contained
-syn match mixerInputParameter "^\s*input8" contained
-syn match mixerOutputParameter "^\s*maximum" contained
-syn match mixerOutputParameter "^\s*minimum" contained
-syn match mixerOutputParameter "^\s*output" contained
-syn match mixerHeader /\[mixer\]/ contained
-syn region mixerCircuit start=/\[mixer\]/ end=/\[/me=s-1 transparent contains=mixerHeader,mixerInputParameter,mixerOutputParameter,ioregister,number,cable,comment
-hi def link mixerHeader circuitHeader
-hi def link mixerInputParameter inputParameter
-hi def link mixerOutputParameter outputParameter
-
-
-" quantizer
-syn match quantizerInputParameter "^\s*bypass" contained
-syn match quantizerInputParameter "^\s*input" contained
-syn match quantizerOutputParameter "^\s*output" contained
-syn match quantizerInputParameter "^\s*steps" contained
-syn match quantizerInputParameter "^\s*trigger" contained
-syn match quantizerHeader /\[quantizer\]/ contained
-syn region quantizerCircuit start=/\[quantizer\]/ end=/\[/me=s-1 transparent contains=quantizerHeader,quantizerInputParameter,quantizerOutputParameter,ioregister,number,cable,comment
-hi def link quantizerHeader circuitHeader
-hi def link quantizerInputParameter inputParameter
-hi def link quantizerOutputParameter outputParameter
-
-
 " midiin
 syn match midiinOutputParameter "^\s*active" contained
 syn match midiinOutputParameter "^\s*bank" contained
@@ -2255,7 +2400,6 @@ syn match midiinInputParameter "^\s*ccnumber1" contained
 syn match midiinInputParameter "^\s*ccnumber2" contained
 syn match midiinInputParameter "^\s*ccnumber3" contained
 syn match midiinInputParameter "^\s*ccnumber4" contained
-syn match midiinInputParameter "^\s*channel" contained
 syn match midiinInputParameter "^\s*channel" contained
 syn match midiinOutputParameter "^\s*clock" contained
 syn match midiinOutputParameter "^\s*clock16" contained
@@ -2274,6 +2418,7 @@ syn match midiinOutputParameter "^\s*gate7" contained
 syn match midiinOutputParameter "^\s*gate8" contained
 syn match midiinInputParameter "^\s*highestnote" contained
 syn match midiinInputParameter "^\s*holdvelocity" contained
+syn match midiinInputParameter "^\s*initialrunning" contained
 syn match midiinInputParameter "^\s*lowestnote" contained
 syn match midiinOutputParameter "^\s*midiclock" contained
 syn match midiinOutputParameter "^\s*modwheel" contained
@@ -2342,15 +2487,6 @@ syn match midiinOutputParameter "^\s*start" contained
 syn match midiinOutputParameter "^\s*stop" contained
 syn match midiinInputParameter "^\s*systemreset" contained
 syn match midiinInputParameter "^\s*transpose" contained
-syn match midiinOutputParameter "^\s*trigger" contained
-syn match midiinOutputParameter "^\s*trigger1" contained
-syn match midiinOutputParameter "^\s*trigger2" contained
-syn match midiinOutputParameter "^\s*trigger3" contained
-syn match midiinOutputParameter "^\s*trigger4" contained
-syn match midiinOutputParameter "^\s*trigger5" contained
-syn match midiinOutputParameter "^\s*trigger6" contained
-syn match midiinOutputParameter "^\s*trigger7" contained
-syn match midiinOutputParameter "^\s*trigger8" contained
 syn match midiinInputParameter "^\s*tuningmode" contained
 syn match midiinInputParameter "^\s*tuningpitch" contained
 syn match midiinInputParameter "^\s*usb" contained
@@ -2372,34 +2508,55 @@ hi def link midiinInputParameter inputParameter
 hi def link midiinOutputParameter outputParameter
 
 
-" switch
-syn match switchInputParameter "^\s*backward" contained
-syn match switchInputParameter "^\s*forward" contained
-syn match switchInputParameter "^\s*input" contained
-syn match switchInputParameter "^\s*input1" contained
-syn match switchInputParameter "^\s*input2" contained
-syn match switchInputParameter "^\s*input3" contained
-syn match switchInputParameter "^\s*input4" contained
-syn match switchInputParameter "^\s*input5" contained
-syn match switchInputParameter "^\s*input6" contained
-syn match switchInputParameter "^\s*input7" contained
-syn match switchInputParameter "^\s*input8" contained
-syn match switchInputParameter "^\s*offset" contained
-syn match switchOutputParameter "^\s*output" contained
-syn match switchOutputParameter "^\s*output1" contained
-syn match switchOutputParameter "^\s*output2" contained
-syn match switchOutputParameter "^\s*output3" contained
-syn match switchOutputParameter "^\s*output4" contained
-syn match switchOutputParameter "^\s*output5" contained
-syn match switchOutputParameter "^\s*output6" contained
-syn match switchOutputParameter "^\s*output7" contained
-syn match switchOutputParameter "^\s*output8" contained
-syn match switchInputParameter "^\s*reset" contained
-syn match switchHeader /\[switch\]/ contained
-syn region switchCircuit start=/\[switch\]/ end=/\[/me=s-1 transparent contains=switchHeader,switchInputParameter,switchOutputParameter,ioregister,number,cable,comment
-hi def link switchHeader circuitHeader
-hi def link switchInputParameter inputParameter
-hi def link switchOutputParameter outputParameter
+" minifonion
+syn match minifonionInputParameter "^\s*bypass" contained
+syn match minifonionInputParameter "^\s*degree" contained
+syn match minifonionInputParameter "^\s*input" contained
+syn match minifonionOutputParameter "^\s*notechange" contained
+syn match minifonionInputParameter "^\s*noteshift" contained
+syn match minifonionOutputParameter "^\s*output" contained
+syn match minifonionInputParameter "^\s*root" contained
+syn match minifonionInputParameter "^\s*select1" contained
+syn match minifonionInputParameter "^\s*select11" contained
+syn match minifonionInputParameter "^\s*select13" contained
+syn match minifonionInputParameter "^\s*select3" contained
+syn match minifonionInputParameter "^\s*select5" contained
+syn match minifonionInputParameter "^\s*select7" contained
+syn match minifonionInputParameter "^\s*select9" contained
+syn match minifonionInputParameter "^\s*selectfill1" contained
+syn match minifonionInputParameter "^\s*selectfill2" contained
+syn match minifonionInputParameter "^\s*selectfill3" contained
+syn match minifonionInputParameter "^\s*selectfill4" contained
+syn match minifonionInputParameter "^\s*selectfill5" contained
+syn match minifonionInputParameter "^\s*selectnoteshift" contained
+syn match minifonionInputParameter "^\s*transpose" contained
+syn match minifonionInputParameter "^\s*trigger" contained
+syn match minifonionInputParameter "^\s*tuningmode" contained
+syn match minifonionInputParameter "^\s*tuningpitch" contained
+syn match minifonionHeader /\[minifonion\]/ contained
+syn region minifonionCircuit start=/\[minifonion\]/ end=/\[/me=s-1 transparent contains=minifonionHeader,minifonionInputParameter,minifonionOutputParameter,ioregister,number,cable,comment
+hi def link minifonionHeader circuitHeader
+hi def link minifonionInputParameter inputParameter
+hi def link minifonionOutputParameter outputParameter
+
+
+" gatetool
+syn match gatetoolInputParameter "^\s*gatelength" contained
+syn match gatetoolInputParameter "^\s*gatestretch" contained
+syn match gatetoolInputParameter "^\s*inputedge" contained
+syn match gatetoolInputParameter "^\s*inputgate" contained
+syn match gatetoolInputParameter "^\s*inputtrigger" contained
+syn match gatetoolInputParameter "^\s*maxgatelength" contained
+syn match gatetoolInputParameter "^\s*mingatelength" contained
+syn match gatetoolOutputParameter "^\s*outputedge" contained
+syn match gatetoolOutputParameter "^\s*outputgate" contained
+syn match gatetoolOutputParameter "^\s*outputtrigger" contained
+syn match gatetoolInputParameter "^\s*taptempo" contained
+syn match gatetoolHeader /\[gatetool\]/ contained
+syn region gatetoolCircuit start=/\[gatetool\]/ end=/\[/me=s-1 transparent contains=gatetoolHeader,gatetoolInputParameter,gatetoolOutputParameter,ioregister,number,cable,comment
+hi def link gatetoolHeader circuitHeader
+hi def link gatetoolInputParameter inputParameter
+hi def link gatetoolOutputParameter outputParameter
 
 
 " togglebutton
@@ -2437,6 +2594,9 @@ hi def link triggerdelayOutputParameter outputParameter
 
 
 " motorfader
+syn match motorfaderInputParameter "^\s*clear" contained
+syn match motorfaderInputParameter "^\s*clearall" contained
+syn match motorfaderInputParameter "^\s*dontsave" contained
 syn match motorfaderInputParameter "^\s*fader" contained
 syn match motorfaderInputParameter "^\s*ledcolor" contained
 syn match motorfaderInputParameter "^\s*ledvalue" contained
@@ -2444,7 +2604,6 @@ syn match motorfaderInputParameter "^\s*loadpreset" contained
 syn match motorfaderInputParameter "^\s*notches" contained
 syn match motorfaderOutputParameter "^\s*output" contained
 syn match motorfaderInputParameter "^\s*preset" contained
-syn match motorfaderInputParameter "^\s*reset" contained
 syn match motorfaderInputParameter "^\s*savepreset" contained
 syn match motorfaderInputParameter "^\s*select" contained
 syn match motorfaderInputParameter "^\s*selectat" contained
@@ -2486,6 +2645,17 @@ hi def link logicInputParameter inputParameter
 hi def link logicOutputParameter outputParameter
 
 
+" once
+syn match onceInputParameter "^\s*delay" contained
+syn match onceInputParameter "^\s*onlycoldstart" contained
+syn match onceOutputParameter "^\s*trigger" contained
+syn match onceHeader /\[once\]/ contained
+syn region onceCircuit start=/\[once\]/ end=/\[/me=s-1 transparent contains=onceHeader,onceInputParameter,onceOutputParameter,ioregister,number,cable,comment
+hi def link onceHeader circuitHeader
+hi def link onceInputParameter inputParameter
+hi def link onceOutputParameter outputParameter
+
+
 " algoquencer
 syn match algoquencerOutputParameter "^\s*accent" contained
 syn match algoquencerInputParameter "^\s*accentbutton" contained
@@ -2520,9 +2690,12 @@ syn match algoquencerInputParameter "^\s*button7" contained
 syn match algoquencerInputParameter "^\s*button8" contained
 syn match algoquencerInputParameter "^\s*button9" contained
 syn match algoquencerInputParameter "^\s*clear" contained
+syn match algoquencerInputParameter "^\s*clearall" contained
+syn match algoquencerInputParameter "^\s*clearpage" contained
 syn match algoquencerInputParameter "^\s*clock" contained
 syn match algoquencerInputParameter "^\s*dejavu" contained
 syn match algoquencerInputParameter "^\s*distribution" contained
+syn match algoquencerInputParameter "^\s*dontsave" contained
 syn match algoquencerInputParameter "^\s*fillorder" contained
 syn match algoquencerInputParameter "^\s*fills" contained
 syn match algoquencerOutputParameter "^\s*fillsled" contained
@@ -2547,6 +2720,7 @@ syn match algoquencerOutputParameter "^\s*led8" contained
 syn match algoquencerOutputParameter "^\s*led9" contained
 syn match algoquencerInputParameter "^\s*length" contained
 syn match algoquencerInputParameter "^\s*lengthbutton" contained
+syn match algoquencerOutputParameter "^\s*lengthoutput" contained
 syn match algoquencerInputParameter "^\s*loadpreset" contained
 syn match algoquencerOutputParameter "^\s*morphled" contained
 syn match algoquencerInputParameter "^\s*morphs" contained
@@ -2599,4 +2773,3 @@ syn region algoquencerCircuit start=/\[algoquencer\]/ end=/\[/me=s-1 transparent
 hi def link algoquencerHeader circuitHeader
 hi def link algoquencerInputParameter inputParameter
 hi def link algoquencerOutputParameter outputParameter
-
