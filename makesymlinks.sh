@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="ackrc aliases bash_profile bash_prompt bashrc bowerrc curlrc extra gitconfig nvmrc profile vim zshrc"    # list of files/folders to symlink in homedir
+files="ackrc aliases bash_profile bash_prompt bashrc bowerrc curlrc extra gitconfig nvmrc path profile vim zshrc"    # list of files/folders to symlink in homedir
 
 ##########
 
