@@ -77,6 +77,10 @@ brew install bash-completion
 # https://devcenter.heroku.com/articles/heroku-cli
 brew tap heroku/brew && brew install heroku
 
+# Install zoxide
+# https://github.com/ajeetdsouza/zoxide
+brew install zoxide
+
 # install things nedded at work
 read -p "Are you at work?" -n 1 -r
 echo    # (optional) move to a new line
