@@ -81,6 +81,11 @@ brew tap heroku/brew && brew install heroku
 # https://github.com/ajeetdsouza/zoxide
 brew install zoxide
 
+# Install fzf
+# https://github.com/junegunn/fzf
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
 # install things nedded at work
 read -p "Are you at work?" -n 1 -r
 echo    # (optional) move to a new line

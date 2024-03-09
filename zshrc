@@ -84,3 +84,6 @@ alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-
 # Add zoxide
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
+
+# Add fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
