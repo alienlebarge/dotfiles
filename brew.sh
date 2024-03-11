@@ -86,6 +86,10 @@ brew install zoxide
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
+# Install stow
+# https://www.gnu.org/software/stow/
+brew install stow
+
 # install things nedded at work
 read -p "Are you at work?" -n 1 -r
 echo    # (optional) move to a new line
