@@ -19,6 +19,9 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
+# MacOS files
+^/.DS_Store
+
 # Vim stuff
 \.swo
 \.swp
