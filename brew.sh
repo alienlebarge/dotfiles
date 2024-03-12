@@ -87,6 +87,10 @@ $(brew --prefix)/opt/fzf/install
 # https://www.gnu.org/software/stow/
 brew install stow
 
+# A replacement for cat(1)
+# https://github.com/sharkdp/bat
+brew install bat
+
 # install things nedded at work
 read -p "Are you at work?" -n 1 -r
 echo    # (optional) move to a new line
