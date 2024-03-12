@@ -25,6 +25,7 @@ _darcs
 # Vim stuff
 \.swo
 \.swp
+\.swn
 
 # Brew scripts
 \*.sh
