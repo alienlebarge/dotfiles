@@ -44,9 +44,9 @@ brew install yarn
 # Because we need pony
 brew install ponysay
 
-# Install exa
+# Install eza
 # a replacement for `ls`
-brew install exa
+brew install eza
 
 # Install Ack
 # https://beyondgrep.com/
