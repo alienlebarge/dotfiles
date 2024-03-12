@@ -48,6 +48,10 @@ brew install ponysay
 # a replacement for `ls`
 brew install eza
 
+# Install lsd
+# a better ls https://github.com/lsd-rs/
+brew install lsd
+
 # Install Ack
 # https://beyondgrep.com/
 brew install ack
