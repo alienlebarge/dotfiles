@@ -17,6 +17,11 @@ default shell, the setup script will execute a `chsh -s $(which zsh)`.  This
 changes the default shell to zsh, and takes effect as soon as a new zsh is
 spawned or on next login.
 
+## Requirements
+
+Requirements for installing those dotfiles:
+ 1. [Install Homebrew](https://brew.sh/)
+
 ## Installation
 
     $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
