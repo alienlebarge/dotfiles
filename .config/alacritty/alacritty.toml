@@ -16,9 +16,9 @@ x = 25
 y = 20
 
 [font]
-size = 12
-normal = { family = "MD IO Variable", style = "Regular" }
-bold = { family = "MD IO Variable", style = "Bold" }
+size = 14
+normal = { family = "MD IO Variable", style = "Thin" }
+bold = { family = "MD IO Variable", style = "Medium" }
 italic = { family = "MD IO Variable", style = "Italic" }
-bold_italic = { family = "MD IO Variable", style = "Bold Italic" }
+bold_italic = { family = "MD IO Variable", style = "Medium Italic" }
 
