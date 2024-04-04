@@ -20,3 +20,6 @@
 # Ignore specific config
 /extra
 /path
+/.swl
+/.swm
+/.swn
