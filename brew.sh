@@ -95,6 +95,14 @@ brew install stow
 # https://github.com/sharkdp/bat
 brew install bat
 
+# install tmux and tpm (tmux package manager)
+brew install tmux
+brew install tpm
+# if plugin do not exist, download it
+if [ ! -d  ~/.tmux/plugins/tpm ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
 # install things nedded at work
 read -p "Are you at work?" -n 1 -r
 echo    # (optional) move to a new line
