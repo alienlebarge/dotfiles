@@ -1,0 +1,11 @@
+theme=catppuccin-latte
+window-height=30
+window-width=110
+
+title="Oh, hello"
+window-title-font-family="MD IO Variable"
+
+font-family="MD IO Variable"
+font-size=14
+font-feature=calt
+# font-thicken=true

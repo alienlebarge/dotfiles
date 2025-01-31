@@ -95,6 +95,9 @@ brew install stow
 # https://github.com/sharkdp/bat
 brew install bat
 
+# Install ghostty terminal
+brew install --cask ghostty
+
 # install tmux and tpm (tmux package manager)
 brew install tmux
 brew install tpm
