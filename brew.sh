@@ -11,7 +11,7 @@ if [[ $? != 0 ]] ; then
     # Install Homebrew if not installed
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    # Make sure we’re using the latest Homebrew.
+    # Make sure we're using the latest Homebrew.
     brew update
 fi
 
@@ -61,7 +61,7 @@ brew install vim
 # Install Python for Vim
 xcode-select --install
 
-# Install ghi: View your repo’s GitHub issues on the command line
+# Install ghi: View your repo's GitHub issues on the command line
 brew install ghi
 
 # Install lynx text browser
@@ -106,11 +106,12 @@ if [ ! -d  ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
-# install things nedded at work
-read -p "Are you at work?" -n 1 -r
-echo    # (optional) move to a new line
+# Install work-related tools
+read -p "Are you at work? [y/N] " -n 1 -r
+echo    # new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+    echo "Installing work tools..."
     # install https://github.com/Homebrew/homebrew-services
     brew tap homebrew/services
 
