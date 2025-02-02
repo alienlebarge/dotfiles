@@ -21,6 +21,7 @@ spawned or on next login.
 
 Requirements for installing those dotfiles:
  1. [Install Homebrew](https://brew.sh/)
+ 2. Run `$ brew install stow`
 
 ## Installation
 
