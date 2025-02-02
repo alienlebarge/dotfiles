@@ -106,20 +106,6 @@ if [ ! -d  ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
-# Install work-related tools
-read -p "Are you at work? [y/N] " -n 1 -r
-echo    # new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    echo "Installing work tools..."
-    # install https://github.com/Homebrew/homebrew-services
-    brew tap homebrew/services
-
-    # install and start cntlm at login
-    brew install cntlm
-    brew services start cntlm
-fi
-
 # Remove outdated versions from the cellar.
 brew cleanup
 

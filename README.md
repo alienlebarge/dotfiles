@@ -1,87 +1,85 @@
 dotfiles
 =========
 
-This repository contains my custom dotfiles. It should be cloned to your home directory so that the path is `~/dotfiles/`.
+This repository includes all of my custom dotfiles.  They should be cloned to
+your home directory so that the path is `~/dotfiles/`.  The included setup
+script creates symlinks from your home directory to the files which are located
+in `~/dotfiles/`.
+
+The setup script is smart enough to back up your existing dotfiles into a
+`~/dotfiles_old/` directory if you already have any dotfiles of the same name as
+the dotfile symlinks being created in your home directory.
+
+I also prefer `zsh` as my shell of choice.  As such, the setup script will also
+clone the `oh-my-zsh` repository from my GitHub. It then checks to see if `zsh`
+is installed.  If `zsh` is installed, and it is not already configured as the
+default shell, the setup script will execute a `chsh -s $(which zsh)`.  This
+changes the default shell to zsh, and takes effect as soon as a new zsh is
+spawned or on next login.
+
+## Requirements
+
+Requirements for installing those dotfiles:
+ 1. [Install Homebrew](https://brew.sh/)
 
 ## Installation
 
-These dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/), a symlink manager that helps maintain dotfiles in an organized way.
+    $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
+    $ cd ~/dotfiles
+    $ git submodule update --init --recursive
+    $ stow .
+    $ ./brew.sh
 
-### Prerequisites
+## Update
 
-1. [Homebrew](https://brew.sh/) must be installed
-2. GNU Stow: `brew install stow`
+    $ git pull
+    $ git submodule foreach git pull
 
-### Installation Steps
+## Vim
 
-```bash
-# Clone the repository
-git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
-
-# Move to the directory
-cd ~/dotfiles
-
-# Initialize and update submodules
-git submodule update --init --recursive
-
-# Create symlinks with stow
-stow .
-
-# Install Homebrew formulae
-./brew.sh
-```
-
-### Update
-
-```bash
-git pull
-git submodule foreach git pull
-```
-
-## Configuration
-
-### Proxy (Work Environment)
-
-If you work behind a proxy, [SquidMan](http://squidman.net) is used to manage proxy connections. If you don't need proxy settings, you'll need to remove all proxy configurations from the files.
-
-### Vim
-
-#### Plugin Management
+### Plugins
 
 Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug).
 
-To install a new plugin:
-1. Add it to the `.vimrc` file
-2. Run `:PlugInstall` in Vim
+#### Install plugin
 
-To uninstall a plugin:
-1. Remove the corresponding Plug line from `.vimrc`
-2. Source the `.vimrc`
-3. Run `:PlugClean`
+If you need to add a new plugin, simply add it in the `.vimrc` file and run
+`:PlugInstall` in Vim.
 
-#### Update Vim Packages
+#### Uninstall plugin
 
-```bash
-./brew.sh
+Delete the Plug line(s) from your '.vimrc', source the `.vimrc` and call
+`:PlugClean``
+
+### Update Vim packages
+
 ```
+$ ./brew.sh
+```
+
+## Install Homebrew formulae
+
+To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of
+course):
+
+```
+$ ./brew.sh
+```
+
+If you get an error when running it, try to `$ sudo chmod 755 brew.sh` it.
+
 
 ### Git
 
-Git is installed via Homebrew to get the latest version.
+It's installed via Homebrew to get the laetest version (see [Install Homebrew
+formulae](#install-homebrew-formulae)).
 
-#### GitHub Configuration
+#### GitHub Config
 
-To cache your GitHub password, follow the [official documentation](https://help.github.com/articles/caching-your-github-password-in-git/).
-
-## How Stow Works
-
-Stow automatically creates symlinks from your dotfiles to your home directory. For example:
-
-- `~/dotfiles/.vimrc` → `~/.vimrc`
-- `~/dotfiles/.zshrc` → `~/.zshrc`
-
-If a file already exists, Stow won't replace it. You'll need to first backup or remove existing files.
+Use this
+[config](https://help.github.com/articles/caching-your-github-password-in-git/)
+to cache the password.
 
 ## Credits
 
-Based on [Michael Smalley's article](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
+It is based on [Michael Smalley's article](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
