@@ -26,14 +26,12 @@ Requirements for installing those dotfiles:
 
     $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
     $ cd ~/dotfiles
-    $ git submodule update --init --recursive
     $ stow .
     $ ./brew.sh
 
 ## Update
 
     $ git pull
-    $ git submodule foreach git pull
 
 ## Vim
 
