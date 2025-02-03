@@ -1,37 +1,40 @@
-dotfiles
-=========
+# dotfiles
 
-This repository includes all of my custom dotfiles.  They should be cloned to
-your home directory so that the path is `~/dotfiles/`.  The included setup
-script creates symlinks from your home directory to the files which are located
-in `~/dotfiles/`.
-
-The setup script is smart enough to back up your existing dotfiles into a
-`~/dotfiles_old/` directory if you already have any dotfiles of the same name as
-the dotfile symlinks being created in your home directory.
-
-I also prefer `zsh` as my shell of choice.  As such, the setup script will also
-clone the `oh-my-zsh` repository from my GitHub. It then checks to see if `zsh`
-is installed.  If `zsh` is installed, and it is not already configured as the
-default shell, the setup script will execute a `chsh -s $(which zsh)`.  This
-changes the default shell to zsh, and takes effect as soon as a new zsh is
-spawned or on next login.
+This repository includes all of my custom dotfiles. They should be cloned to
+your home directory so that the path is `~/dotfiles/`.
 
 ## Requirements
 
-Requirements for installing those dotfiles:
- 1. [Install Homebrew](https://brew.sh/)
- 2. Run `$ brew install stow`
+Before starting the installation, you need:
+1. [Homebrew](https://brew.sh/) installed on your system
+
+## First installation
+
+If you've never installed these dotfiles before:
+
+    # Make scripts executable
+    $ chmod +x bootstrap.sh brew.sh
+
+    # Clone repository and create symlinks
+    $ ./bootstrap.sh
+
+    # Install all required packages and applications
+    $ ./brew.sh
 
 ## Installation
 
-    $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
-    $ cd ~/dotfiles
-    $ stow --dir . --target ~
+If you already have the repository cloned and just want to update packages:
+
     $ ./brew.sh
 
 ## Update
 
+To get the latest version of the dotfiles:
+
+    # Go to your dotfiles directory
+    $ cd ~/[dotfiles_folder]
+
+    # Pull the latest changes
     $ git pull
 
 ## Vim
@@ -42,43 +45,13 @@ Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug).
 
 #### Install plugin
 
-If you need to add a new plugin, simply add it in the `.vimrc` file and run
-`:PlugInstall` in Vim.
+If you need to add a new plugin:
+1. Add it in the `.vimrc` file
+2. Run `:PlugInstall` in Vim
 
 #### Uninstall plugin
 
-Delete the Plug line(s) from your '.vimrc', source the `.vimrc` and call
-`:PlugClean``
-
-### Update Vim packages
-
-```
-$ ./brew.sh
-```
-
-## Install Homebrew formulae
-
-To install [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of
-course):
-
-```
-$ ./brew.sh
-```
-
-If you get an error when running it, try to `$ sudo chmod 755 brew.sh` it.
-
-
-### Git
-
-It's installed via Homebrew to get the laetest version (see [Install Homebrew
-formulae](#install-homebrew-formulae)).
-
-#### GitHub Config
-
-Use this
-[config](https://help.github.com/articles/caching-your-github-password-in-git/)
-to cache the password.
-
-## Credits
-
-It is based on [Michael Smalley's article](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/).
+To remove a plugin:
+1. Delete the Plug line(s) from your '.vimrc'
+2. Source the `.vimrc`
+3. Call `:PlugClean`
