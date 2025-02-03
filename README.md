@@ -16,7 +16,7 @@ If you've never installed these dotfiles before:
     $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/alienlebarge/dotfiles/master/bootstrap.sh)"
 
     # Make scripts executable
-    $ chmod +x bootstrap.shbrew.sh
+    $ chmod +x bootstrap.sh brew.sh
 
     # Install all required packages and applications
     $ ./brew.sh
