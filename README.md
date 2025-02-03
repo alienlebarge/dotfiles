@@ -12,11 +12,11 @@ Before starting the installation, you need:
 
 If you've never installed these dotfiles before:
 
-    # Make scripts executable
-    $ chmod +x bootstrap.sh brew.sh
+    # Download and execute bootstrap script
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/alienlebarge/dotfiles/master/bootstrap.sh)"
 
-    # Clone repository and create symlinks
-    $ ./bootstrap.sh
+    # Make scripts executable
+    $ chmod +x bootstrap.shbrew.sh
 
     # Install all required packages and applications
     $ ./brew.sh
