@@ -27,7 +27,7 @@ Requirements for installing those dotfiles:
 
     $ git clone http://github.com/alienlebarge/dotfiles ~/dotfiles
     $ cd ~/dotfiles
-    $ stow .
+    $ stow --dir . --target ~
     $ ./brew.sh
 
 ## Update
