@@ -34,12 +34,6 @@ brew install git-lfs
 # Install lazygit
 brew install lazygit
 
-# Install Ruby
-brew install ruby
-
-# Install yarn package manager
-brew install yarn
-
 # Install ponysay
 # Because we need pony
 brew install ponysay
