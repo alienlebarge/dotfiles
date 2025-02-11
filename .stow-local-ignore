@@ -32,3 +32,6 @@ _darcs
 
 # Terminal config
 \*.terminfo
+
+# Raycast
+^/.config/raycast
