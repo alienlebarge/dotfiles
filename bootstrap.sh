@@ -16,7 +16,7 @@ fi
 
 # Install git and stow if not already installed
 echo "Checking required packages..."
-brew install git stow
+brew install git
 
 # Ask for the path
 read -p "Where do you want to clone the repo? [~/Projects/dotfiles] " clone_path
@@ -36,10 +36,6 @@ git clone http://github.com/alienlebarge/dotfiles "$clone_path"
 
 # Change to the dotfiles directory
 cd "$clone_path" || exit 1
-
-# Create symlinks using stow
-echo "Creating symlinks..."
-stow --dir . --target ~ 
 
 echo -e "${GREEN}Dotfiles installation complete!${NC}"
 echo -e "You can now run ${GREEN}./brew.sh${NC} to install additional packages and applications"
