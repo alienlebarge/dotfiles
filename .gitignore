@@ -18,8 +18,8 @@
 !/**/.gitkeep
 
 # Ignore specific config
-/extra
-/path
+/.extra
+/.path
 /.swl
 /.swm
 /.swn

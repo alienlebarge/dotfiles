@@ -1,4 +1,0 @@
-# Add Playdate SDK path
-# More info here: https://sdk.play.date/2.0.3/Inside%20Playdate.html#_set_playdate_sdk_path_environment_variable
-export PLAYDATE_SDK_PATH="$HOME/Developer/PlaydateSDK";
-export PATH="$PATH:$HOME/Developer/PlaydateSDK/bin";
