@@ -59,7 +59,7 @@ brew install ack
 # Install latest version of Vim
 brew install vim
 # Install Python for Vim
-xcode-select --install
+#xcode-select --install
 
 # Install ghi: View your repo's GitHub issues on the command line
 brew install ghi
@@ -72,11 +72,11 @@ brew install terminal-notifier
 
 # Install Git autocompletion
 # see https://apple.stackexchange.com/a/92637
-brew install bash-completion
+#brew install bash-completion
 
 # Install heroku tools
 # https://devcenter.heroku.com/articles/heroku-cli
-brew tap heroku/brew && brew install heroku
+#brew tap heroku/brew && brew install heroku
 
 # Install zoxide
 # https://github.com/ajeetdsouza/zoxide
@@ -85,7 +85,7 @@ brew install zoxide
 # Install fzf
 # https://github.com/junegunn/fzf
 brew install fzf
-$(brew --prefix)/opt/fzf/install
+#$(brew --prefix)/opt/fzf/install
 
 # Install stow
 # https://www.gnu.org/software/stow/
@@ -97,14 +97,6 @@ brew install bat
 
 # Install ghostty terminal
 brew install --cask ghostty
-
-# install tmux and tpm (tmux package manager)
-brew install tmux
-brew install tpm
-# if plugin do not exist, download it
-if [ ! -d  ~/.tmux/plugins/tpm ]; then
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
 
 # Remove outdated versions from the cellar.
 brew cleanup
