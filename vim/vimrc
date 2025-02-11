@@ -159,7 +159,7 @@ set wildmenu
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=*.map,*.min.css
-set wildignore+=node_modules/*,bower_components/*
+set wildignore+=node_modules/*
 
 " Manage multiple buffers effectively: the current buffer can be “sent” to the
 " background without writing to disk. When a background buffer becomes current
