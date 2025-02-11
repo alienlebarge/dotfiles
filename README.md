@@ -26,6 +26,7 @@ If you've never installed these dotfiles before:
 If you already have the repository cloned and just want to update packages:
 
     $ ./brew.sh
+    $ stow --dir=. --target=$HOME ackrc ghostty git zsh
 
 ## Update
 
