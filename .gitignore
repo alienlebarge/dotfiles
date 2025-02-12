@@ -6,11 +6,6 @@
 *.swo
 
 # keep those directory
-/vim/swp/*
-/vim/undodir/*
-
-# ignore installed plugin via vim-plug
-/vim/plugged
 
 # Keep .gitkeep files
 # To keep a directory, add a .gitkeep file to it and ignore the directory with a
@@ -20,6 +15,12 @@
 # Ignore specific config
 /.extra
 /.path
+
+# Vim files
+/vim/**/plugged
+/vim/**/undodir
+/vim/**/swp
+.netrwhist
 /.swl
 /.swm
 /.swn
