@@ -26,3 +26,6 @@
 /.swl
 /.swm
 /.swn
+
+# IDE specific files
+dotfiles.code-workspace
