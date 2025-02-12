@@ -1,5 +1,5 @@
 ##################################################
-# Prompt
+# Path and extra config
 ##################################################
 
 # Load the shell dotfiles, and then some:
@@ -8,6 +8,17 @@
 for file in ~/.{path,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+
+##################################################
+# env
+##################################################
+
+# Charger les variables d'environnement depuis .env
+if [ -f "$HOME/.env" ]; then
+    set -o allexport
+    source "$HOME/.env"
+    set +o allexport
+fi 
 
 ##################################################
 # Starship

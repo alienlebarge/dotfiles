@@ -13,8 +13,10 @@
 !/**/.gitkeep
 
 # Ignore specific config
-/.extra
-/.path
+.extra
+.path
+.gitconfig.local
+.env
 
 # Vim files
 /vim/**/plugged

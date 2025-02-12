@@ -1,3 +1,7 @@
+# Include sensitive information
+[include]
+    path = ~/.gitconfig.local 
+
 [alias]
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -115,11 +119,6 @@
     # Revert and remove untracked files and directories
     rd = "!git checkout -- . && git clean -fd"
 
-[user]
-	name = Cédric Aellen
-    mail = cedric.aellen@alienlebarge.ch
-	email = cedric.aellen@alienlebarge.ch
-
 [push]
     default = current
 
@@ -137,17 +136,19 @@
 [core]
     editor = vim
 
-[credential]
-	helper = osxkeychain
-
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+
 [init]
 	defaultBranch = main
+    
 [commit]
-	gpgsign = false
-[gpg]
-	program = /usr/local/bin/gpg
+	gpgsign = true
+[user]
+	name = Cédric Aellen
+	email = cedric.aellen@alienlebarge.ch
+[credential]
+	helper = osxkeychain
