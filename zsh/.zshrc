@@ -10,24 +10,10 @@ for file in ~/.{path,extra}; do
 done;
 
 ##################################################
-# Prompt
+# Starship
 ##################################################
 
-# Git completion
-autoload -Uz compinit && compinit
-
-# Displaying the branch name
-autoload -Uz vcs_info
-precmd() { vcs_info }
-
-# Customize the prompt
-setopt PROMPT_SUBST
-zstyle ':vcs_info:git:*' formats '%F{153}%b%f'
-PROMPT='%(?.%F{green}●.%F{red}●%f) %F{211}%1~%f ${vcs_info_msg_0_} '
-# displaying the time
-RPROMPT='%F{245}%*%f'
-
-
+eval "$(starship init zsh)"
 
 ##################################################
 # Alias

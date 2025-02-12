@@ -92,6 +92,10 @@ brew install bat
 # Install ghostty terminal
 brew install --cask ghostty
 
+# Install Starship
+# https://starship.rs
+brew install starship
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
