@@ -36,6 +36,3 @@ _darcs
 
 # Raycast
 ^/.config/raycast
-
-# Old config files
-^/.aliases
