@@ -30,6 +30,7 @@ Plug 'tpope/vim-surround'
 Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
 Plug 'wfxr/minimap.vim'
+Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
 
@@ -80,22 +81,19 @@ if has('termguicolors')
 endif
 
 " For dark version.
-set background=dark
+"set background=dark
 
-" Set contrast.
-" This configuration option should be placed before `colorscheme everforest`.
-" Available values: 'hard', 'medium'(default), 'soft'
-let g:everforest_background = 'hard'
 
-" For better performance
-let g:everforest_better_performance = 1
+" Set colorscheme
+set termguicolors
+colorscheme monokai_pro
 
-"Enable syntax highlghting
-syntax enable
-colorscheme everforest
+let g:lightline = {
+      \ 'colorscheme': 'monokai_pro',
+      \ }
 
 " Set airline theme
-let g:airline_theme='everforest'
+let g:airline_theme='monokai'
 
 "Show matching penrens, brackets, etc.
 set showmatch
