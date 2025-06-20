@@ -12,11 +12,12 @@ Plug 'mileszs/ack.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Yggdroot/indentLine'
-if has('python3') && has('timers')
-  Plug 'danth/pathfinder.vim'
-else
-  echoerr 'pathfinder.vim is not supported on this Vim installation'
-endif
+" Disabled due to popup errors
+" if has('python3') && has('timers')
+"   Plug 'danth/pathfinder.vim'
+" else
+"   echoerr 'pathfinder.vim is not supported on this Vim installation'
+" endif
 Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
