@@ -424,7 +424,6 @@ let g:NERDToggleCheckAllLines = 1
 " Minimap.vim
 " Required https://github.com/wfxr/code-minimap see https://github.com/wfxr/minimap.vim
 
-let g:minimap_auto_start = 1
+let g:minimap_auto_start = 0
 let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
+let g:minimap_auto_start_win_enter = 0
