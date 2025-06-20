@@ -31,7 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
 Plug 'wfxr/minimap.vim'
-Plug 'phanviet/vim-monokai-pro'
+Plug 'sainnhe/sonokai'
 call plug#end()
 
 
@@ -86,11 +86,11 @@ endif
 
 
 " Set colorscheme
-colorscheme monokai_pro
+colorscheme sonokai
 
 
 " Set airline theme
-let g:airline_theme='monokai'
+let g:airline_theme='sonokai'
 
 "Show matching penrens, brackets, etc.
 set showmatch
