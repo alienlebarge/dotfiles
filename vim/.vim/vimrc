@@ -85,12 +85,8 @@ endif
 
 
 " Set colorscheme
-set termguicolors
 colorscheme monokai_pro
 
-let g:lightline = {
-      \ 'colorscheme': 'monokai_pro',
-      \ }
 
 " Set airline theme
 let g:airline_theme='monokai'
@@ -125,8 +121,6 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-" When shifting, indent using two spaces.
-set shiftwidth=2
 
 " Round indent to the nearest multiple of 4
 set shiftround
@@ -359,8 +353,6 @@ map  <Left>  <Nop>
 imap <Left>  <Nop>
 map  <Right> <Nop>
 imap <Right> <Nop>
-" Avoid typing `jjjjjj` or `kkkkkkkkkk` by using vim-hardtime plugin
-let g:hardtime_default_on = 1
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
