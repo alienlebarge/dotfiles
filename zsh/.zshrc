@@ -50,7 +50,7 @@ alias j="jobs"
 
 # Claude shortcuts
 alias yolo="claude --dangerously-skip-permissions"
-alias gcauto="git commit -m \"\$(claude -p 'Please review all the changes that have been staged in the Git repository and create a commit summary. Follow these guidelines for the commit message structure: <type>[optional scope]: <description>. Use types like feat, fix, docs, style, refactor, test, and chore. Optionally, add scope for further context. Provide a concise description, and ensure the message is clear and informative.')\""
+alias gcauto="git commit -m \"\$(claude -p 'Please review all the changes that have been staged in the Git repository and create a commit summary. Follow these guidelines for the commit message structure: <type>[optional scope]: <description>. Use types like feat, fix, docs, style, refactor, test, and chore. Optionally, add scope for further context. Provide a concise description, and ensure the message is clear and informative. Only respond with the commit message.')\""
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
