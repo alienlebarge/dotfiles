@@ -9,4 +9,4 @@ font-family="MD IO Variable"
 font-size=14
 font-feature=calt
 # font-thicken=true
-# keybind = shift+enter=text:\n
+keybind = shift+enter=text:\x1b\r

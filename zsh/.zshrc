@@ -127,3 +127,5 @@ export HERD_PHP_81_INI_SCAN_DIR="/Users/cedricaellen/Library/Application Support
 
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/cedricaellen/Library/Application Support/Herd/config/php/82/"
+
+alias claude="/Users/cedricaellen/.claude/local/claude"
