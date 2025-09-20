@@ -150,5 +150,12 @@
 [user]
 	name = Cédric Aellen
 	email = cedric.aellen@alienlebarge.ch
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINOJljT02/FPMZthS92nqSqOUQay6M7goY/KXrnDUYXi
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [credential]
 	helper = osxkeychain
