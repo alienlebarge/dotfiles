@@ -29,3 +29,6 @@
 
 # IDE specific files
 dotfiles.code-workspace
+
+# Backup files
+*.bak
