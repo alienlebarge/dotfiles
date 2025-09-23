@@ -39,8 +39,7 @@ Plug 'Yggdroot/indentLine'
 
 " ========== UI & Visual Enhancement ==========
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'wfxr/minimap.vim'
 
 
@@ -55,8 +54,7 @@ Plug 'elzr/vim-json'
 
 " ========== Color Schemes ==========
 
-Plug 'sainnhe/everforest'
-Plug 'sainnhe/sonokai'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 
 

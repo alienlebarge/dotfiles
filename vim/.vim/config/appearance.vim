@@ -12,11 +12,10 @@ if has('termguicolors')
   set termguicolors
 endif
 
-" Set colorscheme
-colorscheme sonokai
-
-" Set airline theme to match
-let g:airline_theme='sonokai'
+" Set colorscheme variant and theme
+colorscheme catppuccin_mocha
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+let g:airline_theme = 'catppuccin_mocha'
 
 
 
