@@ -1,12 +1,25 @@
-theme=Monokai Pro Spectrum
-window-height=30
-window-width=110
+# Theme Configuration
+theme = Catppuccin Mocha
 
-title="Oh, hello"
-window-title-font-family="MD IO Variable"
+# Window Configuration
+window-height = 30
+window-width = 110
+window-decoration = true
+title = "Oh, hello"
+window-title-font-family = "MD IO Variable"
 
-font-family="MD IO Variable"
-font-size=14
-font-feature=calt
-# font-thicken=true
+# Visual Effects
+background-blur-radius = 20
+background-opacity = 0.7
+
+# Font Configuration
+font-family = "MD IO Variable"
+font-size = 16
+font-feature = calt
+# font-thicken = true
+
+# Input Configuration
+mouse-hide-while-typing = true
+
+# Keybindings
 keybind = shift+enter=text:\x1b\r
