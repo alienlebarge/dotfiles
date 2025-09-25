@@ -18,8 +18,10 @@ This is a personal dotfiles repository that manages shell configurations, develo
 - `npm install --global <package>` - Install global npm packages
 
 ### Vim Plugin Management
-- `:PlugInstall` - Install vim plugins (uses vim-plug)
-- `:PlugClean` - Remove unused plugins
+- `git submodule update --init --recursive` - Install all vim plugins
+- `git submodule update --remote` - Update all plugins to latest versions
+- `:packadd plugin-name` - Manually load optional plugins
+- `:helptags ALL` - Generate help tags for all plugins
 
 ## Architecture
 
