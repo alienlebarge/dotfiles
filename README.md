@@ -55,19 +55,19 @@ Plugins are installed in `~/.vim/pack/bundle/{start,opt}/` as submodules.
 - **vim-surround** ([tpope/vim-surround](https://github.com/tpope/vim-surround)) - Surround text with brackets, quotes, etc.
 - **vim-closetag** ([alvan/vim-closetag](https://github.com/alvan/vim-closetag)) - Auto-close HTML/XML tags
 - **editorconfig-vim** ([editorconfig/editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)) - EditorConfig support
-- **indentLine** ([Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)) - Display indent guides
 - **lightline.vim** ([itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)) - Status line plugin
 - **vim-polyglot** ([sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)) - Language pack collection
-- **vim-jinja** ([lepture/vim-jinja](https://github.com/lepture/vim-jinja)) - Jinja template syntax
 - **vim-json** ([elzr/vim-json](https://github.com/elzr/vim-json)) - JSON syntax highlighting
 - **catppuccin** ([catppuccin/vim](https://github.com/catppuccin/vim)) - Catppuccin color scheme
 - **vim-eunuch** ([tpope/vim-eunuch](https://github.com/tpope/vim-eunuch)) - Unix command helpers
-- **vim-css-color** ([skammer/vim-css-color](https://github.com/skammer/vim-css-color)) - CSS color highlighting
 - **vim-gitgutter** ([airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)) - Git diff indicators
 
 **Optional plugins** (`vim/.vim/pack/bundle/opt/`):
 
 - **minimap** ([wfxr/minimap.vim](https://github.com/wfxr/minimap.vim)) - Code minimap (load with `:packadd minimap`)
+- **vim-css-color** ([skammer/vim-css-color](https://github.com/skammer/vim-css-color)) - CSS color highlighting (load with `:packadd vim-css-color`)
+- **vim-jinja** ([lepture/vim-jinja](https://github.com/lepture/vim-jinja)) - Jinja template syntax (load with `:packadd vim-jinja`)
+- **indentLine** ([Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)) - Display indent guides (load with `:packadd indentLine`)
 
 #### Install all plugins
 
