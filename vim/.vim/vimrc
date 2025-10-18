@@ -4,7 +4,6 @@
 "
 
 " Source all configuration modules
-source ~/.vim/config/plugins.vim
 source ~/.vim/config/settings.vim
 source ~/.vim/config/appearance.vim
 source ~/.vim/config/keymaps.vim

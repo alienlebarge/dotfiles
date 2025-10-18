@@ -28,6 +28,9 @@ _darcs
 \.swn
 \.netrwhist     # Vim file history
 
+# Vim native packages (plugins installed automatically)
+^/vim/\.vim/pack/
+
 # Brew scripts
 \*.sh
 

@@ -10,7 +10,7 @@ window-title-font-family = "MD IO Variable"
 
 # Visual Effects
 background-blur-radius = 20
-background-opacity = 0.7
+background-opacity = 0.9
 
 # Font Configuration
 font-family = "MD IO Variable"
