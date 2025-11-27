@@ -100,6 +100,12 @@ brew install starship
 # https://github.com/nikitabobko/AeroSpace
 brew install --cask nikitabobko/tap/aerospace
 
+# Install JankyBordrs
+# to use with aerospace
+# https://github.com/FelixKratz/JankyBorders
+brew tap FelixKratz/formulae
+brew install borders
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
