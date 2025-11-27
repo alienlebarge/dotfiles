@@ -6,6 +6,7 @@ your home directory so that the path is `~/dotfiles/`.
 ## Requirements
 
 Before starting the installation, you need:
+
 1. [Homebrew](https://brew.sh/) installed on your system
 
 ## First installation
@@ -26,7 +27,7 @@ If you've never installed these dotfiles before:
 If you already have the repository cloned and just want to update packages:
 
     $ ./brew.sh
-    $ stow --dir=. --target=$HOME ackrc env ghostty git starship vim zsh
+    $ stow --dir=. --target=$HOME ackrc aerospace env ghostty git starship vim zsh
 
 ## Update
 
@@ -95,6 +96,7 @@ Then commit the submodule updates:
 #### Add new plugin
 
 To add a new plugin:
+
 1. Add it as a submodule: `git submodule add <repo-url> vim/.vim/pack/bundle/start/<plugin-name>`
 2. For optional plugins use: `vim/.vim/pack/bundle/opt/<plugin-name>`
 3. Update the plugin list in this README.md
@@ -103,6 +105,7 @@ To add a new plugin:
 #### Remove plugin
 
 To remove a plugin:
+
 1. Remove the submodule: `git submodule deinit -f vim/.vim/pack/bundle/{start,opt}/<plugin-name>`
 2. Remove from git: `git rm vim/.vim/pack/bundle/{start,opt}/<plugin-name>`
 3. Update the plugin list in this README.md

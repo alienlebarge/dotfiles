@@ -96,6 +96,10 @@ brew install --cask ghostty
 # https://starship.rs
 brew install starship
 
+# Install Aerospace
+# https://github.com/nikitabobko/AeroSpace
+brew install --cask nikitabobko/tap/aerospace
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
