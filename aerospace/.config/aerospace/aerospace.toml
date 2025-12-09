@@ -134,6 +134,10 @@ alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
+# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
+ctrl-alt-cmd-h = 'move-node-to-monitor left'
+ctrl-alt-cmd-l = 'move-node-to-monitor right'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 ctrl-alt-cmd-k = 'resize smart -50'
 ctrl-alt-cmd-j = 'resize smart +50'
