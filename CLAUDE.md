@@ -11,7 +11,7 @@ This is a personal dotfiles repository that manages shell configurations, develo
 ### Installation & Setup
 - `./bootstrap.sh` - Initial setup script that clones the repository and installs basic dependencies
 - `./brew.sh` - Installs all required packages and applications via Homebrew
-- `stow --dir=. --target=$HOME ackrc env ghostty git starship vim zsh` - Symlink dotfiles to home directory
+- `stow --dir=. --target=$HOME ackrc aerospace env ghostty git starship vim zsh` - Symlink dotfiles to home directory
 
 ### Package Management
 - `brew update && brew upgrade` - Update Homebrew packages
@@ -37,12 +37,18 @@ This is a personal dotfiles repository that manages shell configurations, develo
 - `git/.gitconfig` - Git configuration with aliases and includes sensitive config from `.gitconfig.local`
 - `starship/.config/starship.toml` - Custom shell prompt configuration
 - `ghostty/.config/ghostty/config` - Terminal emulator settings
+- `aerospace/.config/aerospace/aerospace.toml` - AeroSpace window manager configuration
 
 ### Environment Management
 - Environment variables loaded from `~/.env` file in zsh configuration
 - Path extensions loaded from `~/.path` file
 - Extra settings loaded from `~/.extra` file
 - Sensitive git configuration stored in `~/.gitconfig.local` (not tracked)
+
+### Gotchas
+
+- `xterm-256color-italic.terminfo` is excluded from stow and must be installed manually to enable italic rendering in the terminal: `tic xterm-256color-italic.terminfo`
+- `vim/.vim/config/` splits vim settings across multiple files (`appearance.vim`, `keymaps.vim`, `settings.vim`, `plugin-config.vim`, `autocmds.vim`, `abbreviations.vim`) — edit the relevant file rather than `vimrc` directly
 
 ### Package Dependencies
 The repository manages installations of:
