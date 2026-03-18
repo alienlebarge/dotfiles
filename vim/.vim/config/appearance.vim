@@ -25,10 +25,14 @@ let g:airline_theme = 'catppuccin_mocha'
 set showmatch
 
 " Comments and attributes in italic
-highlight Comment cterm=italic
-highlight Comment gui=italic
-highlight htmlArg cterm=italic
-highlight htmlArg gui=italic
+" Use autocmd to re-apply after colorscheme resets highlights
+augroup ItalicOverrides
+  autocmd!
+  autocmd ColorScheme * highlight Comment cterm=italic gui=italic
+  autocmd ColorScheme * highlight htmlArg cterm=italic gui=italic
+augroup END
+highlight Comment cterm=italic gui=italic
+highlight htmlArg cterm=italic gui=italic
 
 
 
