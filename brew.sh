@@ -42,10 +42,6 @@ brew install ponysay
 # a replacement for `ls`
 brew install eza
 
-# Install lsd
-# a better ls https://github.com/lsd-rs/
-brew install lsd
-
 # Install Ack
 # https://beyondgrep.com/
 brew install ack
@@ -110,7 +106,7 @@ brew install borders
 brew cleanup
 
 # Install json, a fast CLI tool for working with JSON
-npm install ---global json
+npm install --global json
 
 # Install trash
 # https://github.com/sindresorhus/trash
