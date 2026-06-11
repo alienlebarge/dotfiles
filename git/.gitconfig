@@ -27,7 +27,7 @@
     did = !"git diff origin/develop"
 
     # Pull in remote changes for the current repository and all its submodules
-    p = !"git pull; git submodule foreach git pull origin main"
+    p = !"git pull; git submodule update --remote"
 
     # Clone a repository including all submodules
     c = clone --recursive
