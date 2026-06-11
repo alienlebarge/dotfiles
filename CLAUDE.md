@@ -52,7 +52,7 @@ This is a personal dotfiles repository that manages shell configurations, develo
 
 ### Package Dependencies
 The repository manages installations of:
-- Development tools: git, vim, node, npm, fzf, ack, bat, eza, lsd
+- Development tools: git, vim, node, npm, fzf, ack, bat, eza
 - Shell enhancements: zsh, starship, zoxide
 - Terminal: ghostty
 - Version control: git-flow, git-lfs, lazygit

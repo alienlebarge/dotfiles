@@ -14,7 +14,7 @@ Before starting the installation, you need:
 If you've never installed these dotfiles before:
 
     # Download and execute bootstrap script
-    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/alienlebarge/dotfiles/master/bootstrap.sh)"
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/alienlebarge/dotfiles/main/bootstrap.sh)"
 
     # Make scripts executable
     $ chmod +x bootstrap.sh brew.sh
