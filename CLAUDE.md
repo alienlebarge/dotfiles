@@ -47,7 +47,6 @@ This is a personal dotfiles repository that manages shell configurations, develo
 
 ### Gotchas
 
-- `xterm-256color-italic.terminfo` is excluded from stow and must be installed manually to enable italic rendering in the terminal: `tic xterm-256color-italic.terminfo`
 - `vim/.vim/config/` splits vim settings across multiple files (`appearance.vim`, `keymaps.vim`, `settings.vim`, `plugin-config.vim`, `autocmds.vim`, `abbreviations.vim`) — edit the relevant file rather than `vimrc` directly
 
 ### Package Dependencies

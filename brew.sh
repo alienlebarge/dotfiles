@@ -115,7 +115,3 @@ npm install --global trash-cli
 
 # install npm npm-check-update
 npm install --global npm-check-updates
-
-# Enable italics in terminal
-# see https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
-tic xterm-256color-italic.terminfo
