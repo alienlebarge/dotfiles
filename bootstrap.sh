@@ -32,7 +32,7 @@ mkdir -p "$(dirname "$clone_path")"
 
 # Clone the repo
 echo "Cloning dotfiles repository..."
-git clone http://github.com/alienlebarge/dotfiles "$clone_path"
+git clone https://github.com/alienlebarge/dotfiles "$clone_path"
 
 # Change to the dotfiles directory
 cd "$clone_path" || exit 1
