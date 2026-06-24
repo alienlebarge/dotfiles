@@ -179,14 +179,16 @@ ctrl-alt-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 ctrl-alt-cmd-s = 'mode service'
 
-# Screenshot : isole la fenêtre au focus sur le workspace "P",
-# la passe en flottant et la fixe à 400×400.
+# Screenshot: isolates the focused window on the "P" workspace,
+# makes it floating, and fixes it to 400×400.
+# Note: AeroSpace doesn't support 'resize' on floating windows yet
+# (see upstream issue nikitabobko/AeroSpace#1156), hence the
+# osascript/System Events fallback for this step only.
 ctrl-alt-cmd-p = [
-  'move-node-to-workspace P',
-  'workspace P',
+  'move-node-to-workspace P --focus-follows-window',
   'layout floating',
-  'resize width 400',
-  'resize height 400',
+  '''exec-and-forget osascript -e 'tell application "System Events" to tell (first application process whose frontmost is true) to set size of front window to {400, 400}'
+''',
 ]
 
 # 'service' binding mode declaration.
@@ -199,6 +201,7 @@ f = [
   'mode main',
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
+p = ['layout tiling', 'mode main'] # Restore a floating window (e.g. after ctrl-alt-cmd-p) back to tiling
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 #s = ['layout sticky tiling', 'mode main']
