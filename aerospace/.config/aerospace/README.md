@@ -62,7 +62,7 @@ Official commands reference: https://nikitabobko.github.io/AeroSpace/commands
 | `ctrl+alt+cmd+tab`         | `workspace-back-and-forth`                                | Jump back to the previous workspace                             |
 | `ctrl+alt+cmd+shift+tab`   | `move-workspace-to-monitor --wrap-around next`            | Move the current workspace to the next monitor                  |
 | `ctrl+alt+cmd+s`           | `mode service`                                            | Enter `service` mode (see below)                                 |
-| `ctrl+alt+cmd+p`           | isolate + floating + resize 800×600 via osascript        | Screenshot helper: isolates the focused window on workspace `P` |
+| `ctrl+alt+cmd+p`           | floating + resize 800×600 via osascript                  | Screenshot helper: makes the focused window floating (stays on its current workspace) |
 
 ## `service` mode
 

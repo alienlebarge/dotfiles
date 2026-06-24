@@ -52,7 +52,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "P"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -179,13 +179,12 @@ ctrl-alt-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 ctrl-alt-cmd-s = 'mode service'
 
-# Screenshot: isolates the focused window on the "P" workspace,
-# makes it floating, and fixes it to 800×600.
+# Screenshot: makes the focused window floating (it stays on its current
+# workspace) and fixes it to 800×600.
 # Note: AeroSpace doesn't support 'resize' on floating windows yet
 # (see upstream issue nikitabobko/AeroSpace#1156), hence the
 # osascript/System Events fallback for this step only.
 ctrl-alt-cmd-p = [
-  'move-node-to-workspace P --focus-follows-window',
   'layout floating',
   '''exec-and-forget osascript -e 'tell application "System Events" to tell (first application process whose frontmost is true) to set size of front window to {800, 600}'
 ''',
