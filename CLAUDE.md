@@ -38,6 +38,7 @@ This is a personal dotfiles repository that manages shell configurations, develo
 - `starship/.config/starship.toml` - Custom shell prompt configuration
 - `ghostty/.config/ghostty/config` - Terminal emulator settings
 - `aerospace/.config/aerospace/aerospace.toml` - AeroSpace window manager configuration
+- `aerospace/.config/aerospace/README.md` - Quick reference for AeroSpace keybindings
 
 ### Environment Management
 - Environment variables loaded from `~/.env` file in zsh configuration
