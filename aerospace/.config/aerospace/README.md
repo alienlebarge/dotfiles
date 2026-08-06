@@ -89,8 +89,9 @@ Not keybindings: these apply automatically when a window appears
 (`[[on-window-detected]]`), matched on the macOS bundle identifier.
 Reference: https://nikitabobko.github.io/AeroSpace/guide#on-window-detected
 
-| App       | `app-id`                    | Rule              |
-|-----------|-----------------------------|-------------------|
-| Pastebot  | `com.tapbots.Pastebot3Mac`  | `layout floating` |
+| App        | `app-id`                             | Rule              |
+|------------|----------------------------------------|-------------------|
+| Pastebot   | `com.tapbots.Pastebot3Mac`           | `layout floating` |
+| Cantilever | `com.-aaron-skates-.Cantilever-Music` | `layout floating` |
 
 > To find an app's `app-id`, run `aerospace list-apps`.
