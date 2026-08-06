@@ -218,3 +218,7 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
 if.app-id = 'com.tapbots.Pastebot3Mac'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.-aaron-skates-.Cantilever-Music'
+run = 'layout floating'
