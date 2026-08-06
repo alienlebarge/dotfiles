@@ -212,3 +212,9 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+# Apps that should always open as floating windows.
+# See: https://nikitabobko.github.io/AeroSpace/guide#on-window-detected
+[[on-window-detected]]
+if.app-id = 'com.tapbots.Pastebot3Mac'
+run = 'layout floating'
