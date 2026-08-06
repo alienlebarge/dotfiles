@@ -82,3 +82,15 @@ Entered via `ctrl+alt+cmd+s`. Every action automatically returns to `main` mode.
 
 > Note: `alt+shift+h/j/k/l` also exist in `main` mode (move a window) — in
 > `service` mode they instead merge containers (`join-with`), not move them.
+
+## Window rules
+
+Not keybindings: these apply automatically when a window appears
+(`[[on-window-detected]]`), matched on the macOS bundle identifier.
+Reference: https://nikitabobko.github.io/AeroSpace/guide#on-window-detected
+
+| App       | `app-id`                    | Rule              |
+|-----------|-----------------------------|-------------------|
+| Pastebot  | `com.tapbots.Pastebot3Mac`  | `layout floating` |
+
+> To find an app's `app-id`, run `aerospace list-apps`.
