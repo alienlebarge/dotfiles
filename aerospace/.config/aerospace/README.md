@@ -93,5 +93,6 @@ Reference: https://nikitabobko.github.io/AeroSpace/guide#on-window-detected
 |------------|----------------------------------------|-------------------|
 | Pastebot   | `com.tapbots.Pastebot3Mac`           | `layout floating` |
 | Cantilever | `com.-aaron-skates-.Cantilever-Music` | `layout floating` |
+| Tot        | `com.iconfactory.Tot`                | `layout floating` |
 
 > To find an app's `app-id`, run `aerospace list-apps`.
