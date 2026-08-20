@@ -102,6 +102,10 @@ brew install --cask nikitabobko/tap/aerospace
 brew tap FelixKratz/formulae
 brew install borders
 
+# Install openlogi
+# https://openlogi.org/
+brew install --cask openlogi
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
