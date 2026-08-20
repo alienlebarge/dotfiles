@@ -11,7 +11,7 @@ This is a personal dotfiles repository that manages shell configurations, develo
 ### Installation & Setup
 - `./bootstrap.sh` - Initial setup script that clones the repository and installs basic dependencies
 - `./brew.sh` - Installs all required packages and applications via Homebrew
-- `stow --dir=. --target=$HOME ackrc aerospace env ghostty git starship vim zsh` - Symlink dotfiles to home directory
+- `stow --dir=. --target=$HOME ackrc aerospace env ghostty git openlogi starship vim zsh` - Symlink dotfiles to home directory
 
 ### Package Management
 - `brew update && brew upgrade` - Update Homebrew packages

@@ -1,0 +1,90 @@
+schema_version = 4
+selected_device = "direct:046d:b023:unit:e8fae622"
+
+[app_settings]
+launch_at_login = true
+check_for_updates = true
+auto_install_updates = false
+update_prompt_seen = true
+show_in_menu_bar = true
+capture_mouse_events = true
+auto_download_assets = true
+asset_source = "automatic"
+thumbwheel_sensitivity = 14
+appearance = "system"
+
+[devices]
+
+[devices."direct:046d:b023:unit:e8fae622".identity]
+display_name = "MX Master 3"
+codename = "Wireless Mouse MX Master 3"
+kind = "mouse"
+
+[devices."direct:046d:b036:serial:2448lvl09nr8".identity]
+display_name = "Pebble Mouse 2 M350s"
+codename = "Pebble Mouse 2 M350s"
+kind = "mouse"
+
+[devices."direct:046d:b023:unit:e8fae622".identity.model_info]
+entity_count = 3
+unit_id = [
+    0,
+    0,
+    0,
+    0,
+]
+model_ids = [
+    45091,
+    16514,
+    0,
+]
+extended_model_id = 0
+
+[devices."direct:046d:b036:serial:2448lvl09nr8".identity.model_info]
+entity_count = 3
+unit_id = [
+    0,
+    0,
+    0,
+    0,
+]
+model_ids = [
+    45110,
+    0,
+    0,
+]
+extended_model_id = 0
+
+[devices."direct:046d:b023:unit:e8fae622".identity.model_info.transports]
+usb = false
+equad = true
+btle = true
+bluetooth = false
+
+[devices."direct:046d:b023:unit:e8fae622".identity.capabilities]
+buttons = true
+pointer = true
+lighting = false
+scroll_inversion = true
+hires_wheel = true
+thumbwheel = true
+haptic_feedback = false
+haptic_panel = false
+
+[keyboard]
+
+[devices."direct:046d:b036:serial:2448lvl09nr8".identity.model_info.transports]
+usb = false
+equad = false
+btle = true
+bluetooth = false
+
+[devices."direct:046d:b036:serial:2448lvl09nr8".identity.capabilities]
+buttons = true
+pointer = true
+lighting = false
+scroll_inversion = false
+hires_wheel = false
+thumbwheel = false
+haptic_feedback = false
+haptic_panel = false
